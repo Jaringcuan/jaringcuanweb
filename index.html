@@ -83,7 +83,7 @@
         .integration-text { font-size: 0.9rem; color: #94a3b8; font-weight: bold; letter-spacing: 3px; margin-bottom: 20px; text-transform: uppercase; }
         .integration-logos { display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; }
         
-        /* Logo Vector Asli */
+        /* 🟢 LOGO VECTOR ASLI (INLINE CSS/SVG) ANTI-ERROR */
         .logo-mt5, .logo-myfxbook { display: flex; align-items: center; gap: 8px; opacity: 0.95; transition: 0.3s; }
         .logo-mt5:hover, .logo-myfxbook:hover { opacity: 1; transform: scale(1.05); }
         .logo-mt5 span { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-size: 1.5rem; color: #f8fafc; margin-left: 5px; }
@@ -234,7 +234,7 @@
 
     <!-- 🌐 HEADER (LOGO & INDIKATOR SERVER) -->
     <header>
-        <a onclick="goHome()" class="header-logo">
+        <a onclick="trackEvent('klik_logo_home'); goHome();" class="header-logo">
             <span class="logo-title">Jaring Cuan</span>
             <span class="logo-subtitle">SMART EA</span>
         </a>
@@ -243,7 +243,7 @@
                 <div class="dot-blink"></div>
                 System Status: Online | Latency: 12ms
             </div>
-            <a href="https://wa.me/6285178755343?text=Halo%20Admin%20Jaring%20Cuan,%20saya%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20seputar%20Asisten%20Trading..." target="_blank" class="btn btn-primary btn-header-wa">
+            <a href="https://wa.me/6285178755343?text=Halo%20Admin%20Jaring%20Cuan,%20saya%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20seputar%20Asisten%20Trading..." target="_blank" class="btn btn-primary btn-header-wa" onclick="trackEvent('klik_wa_header')">
                 <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.573-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964 1.038-3.562c-.663-1.083-1.013-2.328-1.013-3.614 0-4.014 3.268-7.282 7.282-7.282 4.014 0 7.282 3.268 7.282 7.282 0 4.014-3.268 7.282-7.282 7.282z"/></svg>
                 Tanya Admin
             </a>
@@ -261,9 +261,16 @@
         <div class="integration-bar">
             <div class="integration-text">POWERED & VERIFIED BY</div>
             <div class="integration-logos">
-                <!-- 🟢 LOGO VECTOR ASLI METATRADER 5 -->
-                <div class="logo-mt5">
-                    <img src="https://cdn.worldvectorlogo.com/logos/metatrader-5.svg" alt="MetaTrader 5" style="height: 32px; filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));">
+                <!-- 🟢 LOGO VECTOR CANDLESTICK (MENGGANTIKAN MT5 ANTI-ERROR) -->
+                <div class="logo-mt5" title="MetaTrader 5">
+                    <svg width="34" height="34" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));">
+                        <rect x="4" y="10" width="4" height="8" rx="1" fill="#22c55e"/>
+                        <path d="M6 7V10M6 18V21" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="11" y="6" width="4" height="10" rx="1" fill="#ef4444"/>
+                        <path d="M13 3V6M13 16V19" stroke="#ef4444" stroke-width="2" stroke-linecap="round"/>
+                        <rect x="18" y="12" width="4" height="6" rx="1" fill="#22c55e"/>
+                        <path d="M20 9V12M20 18V20" stroke="#22c55e" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
                     <span>MetaTrader 5</span>
                 </div>
                 <!-- 🟢 LOGO VECTOR ASLI MYFXBOOK (SVG INLINE ANTI-ERROR) -->
@@ -278,8 +285,7 @@
         </div>
 
         <div class="catalog-grid">
-            <!-- 1. ISCALP -->
-            <div class="ea-card card-cyan" onclick="openRoom('room-iscalp')">
+            <div class="ea-card card-cyan" onclick="trackEvent('buka_room', {ea: 'iSCALP PRO'}); openRoom('room-iscalp')">
                 <div class="cat-badge">ASISTEN TRADING (SEMI-AUTO)</div>
                 <h3>iSCALP PRO</h3>
                 <div class="ea-title-accent"></div>
@@ -287,8 +293,7 @@
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
             </div>
             
-            <!-- 2. QUANTUM APEX -->
-            <div class="ea-card card-gold" onclick="openRoom('room-quantum')">
+            <div class="ea-card card-gold" onclick="trackEvent('buka_room', {ea: 'QUANTUM APEX'}); openRoom('room-quantum')">
                 <div class="cat-badge">FULL AUTOTRADE (100% OTOMATIS)</div>
                 <h3>QUANTUM APEX</h3>
                 <div class="ea-title-accent"></div>
@@ -296,8 +301,7 @@
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
             </div>
 
-            <!-- 3. MOMENTUM CANDLE -->
-            <div class="ea-card card-gold" onclick="openRoom('room-momentum')">
+            <div class="ea-card card-gold" onclick="trackEvent('buka_room', {ea: 'MOMENTUM CANDLE'}); openRoom('room-momentum')">
                 <div class="cat-badge">FULL AUTOTRADE (100% OTOMATIS)</div>
                 <h3>MOMENTUM CANDLE</h3>
                 <div class="ea-title-accent"></div>
@@ -305,8 +309,7 @@
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
             </div>
 
-            <!-- 4. LIGA PAIR -->
-            <div class="ea-card card-purple" onclick="openRoom('room-liga')">
+            <div class="ea-card card-purple" onclick="trackEvent('buka_room', {ea: 'LIGA PAIR'}); openRoom('room-liga')">
                 <div class="cat-badge">INDIKATOR PREMIUM</div>
                 <h3>LIGA PAIR</h3>
                 <div class="ea-title-accent"></div>
@@ -314,8 +317,7 @@
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
             </div>
 
-            <!-- 5. IZONE -->
-            <div class="ea-card card-cyan" onclick="openRoom('room-izone')">
+            <div class="ea-card card-cyan" onclick="trackEvent('buka_room', {ea: 'iZONE ULTIMATE'}); openRoom('room-izone')">
                 <div class="cat-badge">ASISTEN TRADING (SEMI-AUTO)</div>
                 <h3>iZONE ULTIMATE</h3>
                 <div class="ea-title-accent"></div>
@@ -323,8 +325,7 @@
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
             </div>
 
-            <!-- 6. QUANTUM ULTIMATE -->
-            <div class="ea-card card-gold" onclick="openRoom('room-quantumult')">
+            <div class="ea-card card-gold" onclick="trackEvent('buka_room', {ea: 'QUANTUM ULTIMATE'}); openRoom('room-quantumult')">
                 <div class="cat-badge">FULL AUTOTRADE (100% OTOMATIS)</div>
                 <h3>QUANTUM ULTIMATE</h3>
                 <div class="ea-title-accent"></div>
@@ -365,7 +366,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'iSCALP PRO')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'iSCALP PRO', paket: 'Reguler'}); openSmartForm(this, 'iSCALP PRO')">Pesan Plan Reguler</button>
             </div>
 
             <div class="price-card lifetime">
@@ -379,13 +380,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'iSCALP PRO')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'iSCALP PRO', paket: 'Lifetime'}); openSmartForm(this, 'iSCALP PRO')">Investasi Lifetime</button>
             </div>
 
-            <!-- GARIS PEMISAH & TOMBOL WAJIB BACA -->
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -403,8 +403,8 @@
                     <strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'iSCALP PRO')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'iSCALP PRO', paket: 'Subsidi IB'}); openSmartForm(this, 'iSCALP PRO')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -442,7 +442,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'QUANTUM APEX')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Reguler'}); openSmartForm(this, 'QUANTUM APEX')">Pesan Plan Reguler</button>
             </div>
             
             <div class="price-card lifetime">
@@ -456,12 +456,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'QUANTUM APEX')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Lifetime'}); openSmartForm(this, 'QUANTUM APEX')">Investasi Lifetime</button>
             </div>
 
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -477,8 +477,8 @@
                 </ul>
                 <div class="warning-red"><strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).</div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'QUANTUM APEX')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Subsidi IB'}); openSmartForm(this, 'QUANTUM APEX')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -516,7 +516,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'MOMENTUM CANDLE')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Reguler'}); openSmartForm(this, 'MOMENTUM CANDLE')">Pesan Plan Reguler</button>
             </div>
             
             <div class="price-card lifetime">
@@ -530,12 +530,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'MOMENTUM CANDLE')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Lifetime'}); openSmartForm(this, 'MOMENTUM CANDLE')">Investasi Lifetime</button>
             </div>
 
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -551,8 +551,8 @@
                 </ul>
                 <div class="warning-red"><strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).</div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'MOMENTUM CANDLE')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Subsidi IB'}); openSmartForm(this, 'MOMENTUM CANDLE')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -590,7 +590,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'LIGA PAIR (Indikator)')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'LIGA PAIR', paket: 'Reguler'}); openSmartForm(this, 'LIGA PAIR (Indikator)')">Pesan Plan Reguler</button>
             </div>
             
             <div class="price-card lifetime">
@@ -604,12 +604,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'LIGA PAIR (Indikator)')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'LIGA PAIR', paket: 'Lifetime'}); openSmartForm(this, 'LIGA PAIR (Indikator)')">Investasi Lifetime</button>
             </div>
 
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -625,8 +625,8 @@
                 </ul>
                 <div class="warning-red"><strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).</div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'LIGA PAIR (Indikator)')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'LIGA PAIR', paket: 'Subsidi IB'}); openSmartForm(this, 'LIGA PAIR (Indikator)')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -664,7 +664,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'iZONE ULTIMATE')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Reguler'}); openSmartForm(this, 'iZONE ULTIMATE')">Pesan Plan Reguler</button>
             </div>
             
             <div class="price-card lifetime">
@@ -678,12 +678,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'iZONE ULTIMATE')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Lifetime'}); openSmartForm(this, 'iZONE ULTIMATE')">Investasi Lifetime</button>
             </div>
 
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -699,8 +699,8 @@
                 </ul>
                 <div class="warning-red"><strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).</div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'iZONE ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Subsidi IB'}); openSmartForm(this, 'iZONE ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -738,7 +738,7 @@
                     <li><strong>Auto-Update:</strong> Pembaruan algoritma gratis selama lisensi aktif.</li>
                     <li><strong>Support:</strong> Akses bantuan teknis prioritas di jam kerja.</li>
                 </ul>
-                <button class="btn btn-primary btn-block btn-pulse" onclick="openSmartForm(this, 'QUANTUM ULTIMATE')">Pesan Plan Reguler</button>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Reguler'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Pesan Plan Reguler</button>
             </div>
             
             <div class="price-card lifetime">
@@ -752,12 +752,12 @@
                     <li><strong>VIP Setup:</strong> Bantuan instalasi langsung via Remote Desktop (AnyDesk).</li>
                     <li><strong>Lifetime Update:</strong> Akses pembaruan algoritma seumur hidup.</li>
                 </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm(this, 'QUANTUM ULTIMATE')">Investasi Lifetime</button>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Lifetime'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Investasi Lifetime</button>
             </div>
 
             <div class="pricing-divider-wrap">
                 <hr class="pricing-divider">
-                <button class="btn-warning-glow" onclick="openWajibBacaModal()">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
                     ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
                 </button>
             </div>
@@ -773,8 +773,8 @@
                 </ul>
                 <div class="warning-red"><strong>⚠️ Rekomendasi Ketahanan Modal:</strong> Untuk lot dasar (0.01), kami menyarankan minimal $50-$100 (Akun Cent) atau $500-$1.000 (Akun Standard).</div>
                 <div style="display: flex; flex-direction: column; gap: 12px; margin-top: 25px;">
-                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
-                    <button class="btn btn-primary" onclick="openSmartForm(this, 'QUANTUM ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Kemitraan</button>
+                    <button class="btn btn-primary" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Subsidi IB'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
                 </div>
             </div>
         </div>
@@ -789,11 +789,11 @@
         <h2 class="section-title" style="text-align: center; margin-bottom: 20px;">Official <span>Channel</span></h2>
         <div class="mp-box">
             <div class="marketplace-links">
-                <a href="http://shopee.co.id/jaringcuan77?entryPoint=ShopBySearch&searchKeyword=jaringcuan77" target="_blank" class="mp-btn">
+                <a href="http://shopee.co.id/jaringcuan77?entryPoint=ShopBySearch&searchKeyword=jaringcuan77" target="_blank" class="mp-btn" onclick="trackEvent('klik_sosmed_shopee')">
                     <svg viewBox="0 0 24 24" fill="#ee4d2d"><path d="M16.2 6.8c-.2-1.8-1.7-3.2-3.6-3.2s-3.4 1.4-3.6 3.2H4.8v1.7h1.6v10.6c0 1.2.9 2.1 2.1 2.1h7c1.2 0 2.1-.9 2.1-2.1V8.5h1.6V6.8h-4.2zm-7.3 0c.2-1 1.1-1.7 2.1-1.7s1.9.7 2.1 1.7H8.9zm6.9 12.3c0 .3-.2.6-.6.6h-7c-.3 0-.6-.2-.6-.6V8.5h8.2v10.6z"/><path d="M9.8 11.8h4.4v1.5H9.8zM9.8 15.3h4.4v1.5H9.8z"/></svg>
                     Shopee
                 </a>
-                <a href="https://www.youtube.com/@eajaringcuan" target="_blank" class="mp-btn">
+                <a href="https://www.youtube.com/@eajaringcuan" target="_blank" class="mp-btn" onclick="trackEvent('klik_sosmed_youtube')">
                     <svg viewBox="0 0 24 24" fill="#ff0000"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
                     YouTube
                 </a>
@@ -868,7 +868,7 @@
                     <span>🏦 BANK BCA a.n <strong>SUNARDI</strong></span>
                     <span style="display: flex; align-items: center; font-size: 1.3rem;">
                         🔢 <strong>7130298634</strong>
-                        <button type="button" class="btn-copy" onclick="copyText('7130298634', this)">📋 Salin</button>
+                        <button type="button" class="btn-copy" onclick="trackEvent('klik_salin_rekening'); copyText('7130298634', this)">📋 Salin</button>
                     </span>
                 </div>
             </div>
@@ -943,7 +943,7 @@
                 <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 15px; margin-top: 25px;">Kirim Order ke WhatsApp & Sistem</button>
 
                 <!-- 🟢 PROMO TEXT UNTUK PEMBELI MARKETPLACE -->
-                <div style="text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+                <div id="promo-marketplace" style="display: none; text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
                     <a href="https://www.jaringcuan.net" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='#f8fafc'" onmouseout="this.style.color='#94a3b8'">
                         🌎 www.jaringcuan.net
                     </a>
@@ -956,7 +956,22 @@
     <!-- 🟢 SCRIPT LOGIKA JAVASCRIPT UTAMA -->
     <!-- ======================================================= -->
     <script>
-        // --- 1. LOGIKA ANTI-KELUAR SAAT TEKAN 'BACK' DI HP ---
+        // --- 0. GOOGLE ANALYTICS EVENT TRACKER HELPER ---
+        function trackEvent(eventName, params = {}) {
+            if (typeof gtag === 'function') {
+                gtag('event', eventName, params);
+            }
+        }
+
+        // --- 1. DETEKSI OTOMATIS LINK #form (SEBELUM ANTI-KELUAR BEKERJA) ---
+        let isMarketplaceMode = false;
+        const currentHash = window.location.hash;
+        
+        if (currentHash === '#form') {
+            isMarketplaceMode = true;
+        }
+
+        // Logika Anti-Keluar (Menyapu URL)
         window.history.replaceState({ room: 'lobby' }, '', window.location.pathname);
         
         window.addEventListener('popstate', function(event) {
@@ -964,6 +979,41 @@
                 showRoomElement(event.state.room);
             } else {
                 showLobbyElement();
+            }
+        });
+
+        // 🟢 PERBAIKAN: EKSEKUSI FORM #form SETELAH HALAMAN SIAP
+        window.addEventListener('DOMContentLoaded', function() {
+            if (isMarketplaceMode) {
+                // Sembunyikan seluruh halaman (Lobby & Room)
+                document.getElementById('lobby').style.display = 'none';
+                document.querySelectorAll('.ea-room').forEach(room => room.style.display = 'none');
+                
+                // Set UI form khusus Marketplace
+                document.getElementById('payment-info').style.display = 'none';
+                document.getElementById('sumber-order-group').style.display = 'block';
+                document.getElementById('sumber_order').setAttribute('required', 'true');
+                
+                // Ubah Tampilan Paket
+                document.getElementById('group-paket-normal').style.display = 'none';
+                document.getElementById('group-paket-market').style.display = 'block';
+                document.getElementById('market_val_paket').setAttribute('required', 'true');
+                document.getElementById('val_paket').removeAttribute('required');
+
+                // Ubah Tampilan EA (Dropdown)
+                document.getElementById('group-ea-normal').style.display = 'none';
+                document.getElementById('group-ea-market').style.display = 'block';
+                document.getElementById('market_val_ea').setAttribute('required', 'true');
+                document.getElementById('val_ea').removeAttribute('required');
+                
+                // Tampilkan Teks Promo Website
+                document.getElementById('promo-marketplace').style.display = 'block';
+
+                // Buka Form Otomatis
+                formModal.classList.add('active');
+                
+                // Track Event pembukaan form dari marketplace
+                trackEvent('buka_form_marketplace');
             }
         });
 
@@ -1026,7 +1076,7 @@
             }
         }
 
-        // --- 3. MANAJEMEN POP-UP (MODAL) & MODE MARKETPLACE ---
+        // --- 3. MANAJEMEN POP-UP (MODAL) ---
         const wajibBacaModal = document.getElementById('wajibBacaModal');
         function openWajibBacaModal() { wajibBacaModal.classList.add('active'); }
         function closeWajibBacaModal() { wajibBacaModal.classList.remove('active'); }
@@ -1036,6 +1086,7 @@
         function closeReferralModal() { referralModal.classList.remove('active'); }
         
         function copyAndRedirect(btnElement) {
+            trackEvent('klik_link_exness');
             copyText('1l69bo5xiw', btnElement);
             setTimeout(() => {
                 window.open('https://one.exnessonelink.com/a/1l69bo5xiw', '_blank');
@@ -1047,39 +1098,6 @@
         const inputEa = document.getElementById('val_ea');
         const inputPaket = document.getElementById('val_paket');
         const inputMt5 = document.getElementById('val_mt5');
-
-        let isMarketplaceMode = false;
-        
-        // 🟢 DETEKSI OTOMATIS LINK #form SAAT WEB DIBUKA
-        window.addEventListener('DOMContentLoaded', function() {
-            if (window.location.hash === '#form') {
-                isMarketplaceMode = true;
-                
-                // Sembunyikan seluruh halaman (Lobby & Room)
-                document.getElementById('lobby').style.display = 'none';
-                document.querySelectorAll('.ea-room').forEach(room => room.style.display = 'none');
-                
-                // Set UI form khusus Marketplace
-                document.getElementById('payment-info').style.display = 'none';
-                document.getElementById('sumber-order-group').style.display = 'block';
-                document.getElementById('sumber_order').setAttribute('required', 'true');
-                
-                // Ubah Tampilan Paket
-                document.getElementById('group-paket-normal').style.display = 'none';
-                document.getElementById('group-paket-market').style.display = 'block';
-                document.getElementById('market_val_paket').setAttribute('required', 'true');
-                document.getElementById('val_paket').removeAttribute('required');
-
-                // Ubah Tampilan EA (Dropdown)
-                document.getElementById('group-ea-normal').style.display = 'none';
-                document.getElementById('group-ea-market').style.display = 'block';
-                document.getElementById('market_val_ea').setAttribute('required', 'true');
-                document.getElementById('val_ea').removeAttribute('required');
-                
-                // Buka Form Otomatis
-                formModal.classList.add('active');
-            }
-        });
 
         function openSmartForm(btnElement, eaName) {
             const card = btnElement.closest('.price-card');
@@ -1103,9 +1121,10 @@
         function closeFormModal() { 
             formModal.classList.remove('active'); 
             // Jika pembeli dari #form menutup pop-up, kita munculkan kembali halaman utama
-            if (window.location.hash === '#form') {
+            if (isMarketplaceMode) {
                 showLobbyElement();
                 window.history.replaceState({ room: 'lobby' }, '', window.location.pathname);
+                isMarketplaceMode = false; // Reset mode agar web normal kembali
             }
         }
 
@@ -1149,6 +1168,9 @@
                 formData.set('pilihan_ea', ea);
                 formData.set('pilihan_paket', paket);
             }
+            
+            // Lacak Event Submit Form ke GA4
+            trackEvent('submit_order_sukses', {ea_terpilih: ea, paket_terpilih: paket});
 
             let teksWA = "";
 
