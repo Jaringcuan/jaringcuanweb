@@ -14,7 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaring Cuan - Asisten Trading MT5</title>
     
+    <!-- 🟢 META TAGS UNTUK SHARE WHATSAPP/SOSMED -->
     <meta name="description" content="Selamatkan Modal Anda. Berhenti Trading Mengandalkan Feeling. Beralihlah ke ekosistem algoritma cerdas Jaring Cuan.">
+    <meta property="og:title" content="Jaring Cuan - Asisten Trading MT5">
+    <meta property="og:description" content="Selamatkan Modal Anda. Berhenti Trading Mengandalkan Feeling. Beralihlah ke ekosistem algoritma cerdas Jaring Cuan.">
+    <meta property="og:type" content="website">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⚡</text></svg>">
 
     <style>
@@ -80,9 +84,9 @@
         .integration-logos { display: flex; gap: 40px; align-items: center; justify-content: center; flex-wrap: wrap; }
         
         /* Logo Vector Asli */
-        .logo-mt5, .logo-myfxbook { display: flex; align-items: center; gap: 10px; opacity: 0.95; transition: 0.3s; }
+        .logo-mt5, .logo-myfxbook { display: flex; align-items: center; gap: 8px; opacity: 0.95; transition: 0.3s; }
         .logo-mt5:hover, .logo-myfxbook:hover { opacity: 1; transform: scale(1.05); }
-        .logo-mt5 span { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-size: 1.5rem; color: #f8fafc; }
+        .logo-mt5 span { font-family: 'Segoe UI', Arial, sans-serif; font-weight: bold; font-size: 1.5rem; color: #f8fafc; margin-left: 5px; }
 
         /* UI/UX Card Neumorphism/Glassmorphism */
         .catalog-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 35px; margin-top: 20px; }
@@ -90,14 +94,10 @@
         
         .ea-card h3 { font-size: 1.7rem; margin: 15px 0 5px 0; color: var(--text-main); font-weight: 800; letter-spacing: 0.5px; }
         
-        /* Garis Visual (Accent Line) di bawah Nama EA */
         .ea-title-accent { width: 45px; height: 3px; margin: 5px auto 15px auto; border-radius: 2px; }
-        
-        /* Typography Deskripsi Lebih Halus */
         .ea-short-desc { color: #cbd5e1; font-size: 1.02rem; margin-bottom: 25px; flex-grow: 1; line-height: 1.7; letter-spacing: 0.2px; font-weight: 400; }
         .ea-short-desc em { color: #fff; font-style: italic; font-weight: 600; }
         
-        /* Label Transparan (Ghost Badge) */
         .cat-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); padding: 5px 20px; border-radius: 20px; font-weight: 800; font-size: 0.8rem; letter-spacing: 1.5px; white-space: nowrap; z-index: 2; background: var(--bg-card); border: 1px solid; backdrop-filter: blur(5px); }
         
         .card-cyan:hover { border-color: rgba(34, 211, 238, 0.4); box-shadow: 0 15px 40px rgba(34, 211, 238, 0.15); transform: translateY(-8px); }
@@ -158,7 +158,6 @@
         .price-card.lifetime { border-color: rgba(239, 68, 68, 0.4); }
         .price-card.subsidi { border-color: rgba(59, 130, 246, 0.4); }
 
-        /* Garis Pemisah IB & Tombol Wajib Baca */
         .pricing-divider-wrap { text-align: center; margin: 15px 0; position: relative; }
         .pricing-divider { border: 0; height: 1px; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); margin-bottom: 25px; }
         
@@ -189,12 +188,10 @@
         .modal-close:hover { color: #ef4444; }
         @keyframes modalFadeIn { from { opacity: 0; transform: translateY(-20px) scale(0.95); } to { opacity: 1; transform: translateY(0) scale(1); } }
         
-        /* Modal Konten Wajib Baca Edukasi */
         .wajib-baca-content h3 { color: #60a5fa; font-size: 1.4rem; margin-bottom: 15px; border-bottom: 1px solid rgba(59, 130, 246, 0.3); padding-bottom: 10px; }
         .wajib-baca-content p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; margin-bottom: 15px; }
         .wajib-baca-content strong { color: var(--text-main); }
         
-        /* Form */
         .form-group { margin-bottom: 18px; text-align: left; }
         .form-group label { display: block; font-weight: bold; margin-bottom: 6px; color: var(--text-main); font-size: 0.95rem; }
         .form-group input, .form-group select { width: 100%; padding: 12px 15px; background: rgba(0,0,0,0.2); border: 1px solid var(--border); border-radius: 8px; font-size: 1rem; color: var(--text-main); transition: 0.3s; }
@@ -221,7 +218,6 @@
             .modal-content { padding: 25px 20px; }
             .btn-warning-glow { font-size: 0.9rem; padding: 12px 10px; }
             
-            /* Optimasi 2 Kolom untuk Channel Sosmed */
             .marketplace-links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
             .mp-btn { padding: 10px; font-size: 0.85rem; justify-content: center; width: 100%; }
         }
@@ -265,14 +261,18 @@
         <div class="integration-bar">
             <div class="integration-text">POWERED & VERIFIED BY</div>
             <div class="integration-logos">
-                <!-- Vektor Asli MetaTrader 5 -->
+                <!-- 🟢 LOGO VECTOR ASLI METATRADER 5 -->
                 <div class="logo-mt5">
-                    <img src="https://cdn.worldvectorlogo.com/logos/metatrader-5.svg" alt="MetaTrader 5" style="height: 35px;">
+                    <img src="https://cdn.worldvectorlogo.com/logos/metatrader-5.svg" alt="MetaTrader 5" style="height: 32px; filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));">
                     <span>MetaTrader 5</span>
                 </div>
-                <!-- Vektor Typography Asli Myfxbook -->
-                <div class="logo-myfxbook" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.7rem; font-weight: 700; letter-spacing: -1px; display: flex; align-items: center;">
-                    <span style="color: #fff;">my</span><span style="background-color: #f97316; color: #fff; padding: 0 4px; border-radius: 3px; margin: 0 2px; font-weight: 800;">fx</span><span style="color: #fff;">book</span>
+                <!-- 🟢 LOGO VECTOR ASLI MYFXBOOK (SVG INLINE ANTI-ERROR) -->
+                <div class="logo-myfxbook" style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 1.5rem; font-weight: 700; letter-spacing: -0.5px; display: flex; align-items: center; gap: 6px;">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="filter: drop-shadow(0px 2px 5px rgba(0,0,0,0.5));">
+                        <path d="M3 20L9 12L14 16L21 6" stroke="#f97316" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3 14L9 8L14 11L21 3" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <div><span style="color: #fff;">my</span><span style="background-color: #f97316; color: #fff; padding: 0 4px; border-radius: 3px; font-weight: 800; margin: 0 2px;">fx</span><span style="color: #fff;">book</span></div>
                 </div>
             </div>
         </div>
@@ -317,7 +317,7 @@
             <!-- 5. IZONE -->
             <div class="ea-card card-cyan" onclick="openRoom('room-izone')">
                 <div class="cat-badge">ASISTEN TRADING (SEMI-AUTO)</div>
-                <h3>iZONE_Pro ULTIMATE</h3>
+                <h3>iZONE ULTIMATE</h3>
                 <div class="ea-title-accent"></div>
                 <p class="ea-short-desc">Eksekutor <em>Smart Money Concepts</em> (SMC). Menyingkirkan keraguan saat harga menyentuh Order Block.</p>
                 <button class="btn btn-outline">Pelajari Strategi & Harga</button>
@@ -877,7 +877,7 @@
                 <!-- Kolom Gaib (Honeypot Trap) Anti Robot Spam -->
                 <input type="text" name="hp_trap" id="hp_trap" style="display:none" tabindex="-1" autocomplete="off">
 
-                <!-- Input Sumber Order (Hanya Muncul di Mode Marketplace) -->
+                <!-- 🟢 Input Sumber Order (Hanya Muncul di Mode Marketplace) -->
                 <div class="form-group" id="sumber-order-group" style="display: none;">
                     <label style="color: #60a5fa;">Anda Order Melalui Aplikasi Apa?</label>
                     <select name="sumber_order" id="sumber_order" style="border-color: #3b82f6; background: rgba(59, 130, 246, 0.1);">
@@ -887,30 +887,44 @@
                     </select>
                 </div>
 
-                <div class="form-group">
+                <!-- 🟢 Input EA (Otomatis Normal VS Manual Marketplace) -->
+                <div class="form-group" id="group-ea-normal">
                     <label>Produk Terpilih</label>
                     <input type="text" name="pilihan_ea" id="val_ea" readonly>
                 </div>
+                <div class="form-group" id="group-ea-market" style="display: none;">
+                    <label style="color: #60a5fa;">Pilih Produk EA</label>
+                    <select id="market_val_ea" style="border-color: #3b82f6; background: rgba(59, 130, 246, 0.1);">
+                        <option value="" disabled selected>-- Pilih Produk EA --</option>
+                        <option value="iSCALP PRO">iSCALP PRO</option>
+                        <option value="QUANTUM APEX">QUANTUM APEX</option>
+                        <option value="MOMENTUM CANDLE">MOMENTUM CANDLE</option>
+                        <option value="LIGA PAIR (Indikator)">LIGA PAIR (Indikator)</option>
+                        <option value="iZONE ULTIMATE">iZONE ULTIMATE</option>
+                        <option value="QUANTUM ULTIMATE">QUANTUM ULTIMATE</option>
+                    </select>
+                </div>
 
-                <!-- Input Paket Normal (Menampilkan Harga) -->
+                <!-- 🟢 Input Paket Normal (Menampilkan Harga) -->
                 <div class="form-group" id="group-paket-normal">
                     <label>Paket Lisensi</label>
                     <input type="text" name="pilihan_paket" id="val_paket" readonly>
                 </div>
 
-                <!-- Input Paket Khusus Marketplace (DROPDOWN TANPA HARGA) -->
+                <!-- 🟢 Input Paket Khusus Marketplace (DROPDOWN TANPA HARGA) -->
                 <div class="form-group" id="group-paket-market" style="display: none;">
                     <label style="color: #60a5fa;">Pilih Paket yang Dibeli</label>
                     <select id="market_val_paket" style="border-color: #3b82f6; background: rgba(59, 130, 246, 0.1);">
                         <option value="" disabled selected>-- Pilih Paket --</option>
-                        <option value="Mitra IB | Lisensi 1 Bulan">Mitra IB | Lisensi 1 Bulan</option>
-                        <option value="Lifetime">Lifetime</option>
+                        <option value="Lisensi 1 Bulan">Lisensi 1 Bulan</option>
+                        <option value="Mitra IB">Mitra IB</option>
+                        <option value="Lifetime">Lifetime (Sekali Bayar)</option>
                     </select>
                 </div>
 
                 <div class="form-group">
                     <label>Nama Lengkap</label>
-                    <input type="text" name="nama" required placeholder="Sesuai nama pemesan/pentransfer">
+                    <input type="text" name="nama" required placeholder="Sesuai nama pemesan/akun Anda">
                 </div>
                 <div class="form-group">
                     <label>Nomor WhatsApp</label>
@@ -927,6 +941,13 @@
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 15px; margin-top: 25px;">Kirim Order ke WhatsApp & Sistem</button>
+
+                <!-- 🟢 PROMO TEXT UNTUK PEMBELI MARKETPLACE -->
+                <div style="text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+                    <a href="https://www.jaringcuan.net" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='#f8fafc'" onmouseout="this.style.color='#94a3b8'">
+                        🌎 www.jaringcuan.net
+                    </a>
+                </div>
             </form>
         </div>
     </div>
@@ -959,6 +980,13 @@
             rooms.forEach(room => room.style.display = 'none');
             document.getElementById('lobby').style.display = 'block';
             window.scrollTo(0, 0);
+            
+            // Hentikan Video YouTube saat kembali ke Lobby
+            const iframes = document.querySelectorAll('iframe');
+            iframes.forEach(iframe => {
+                let temp = iframe.src;
+                iframe.src = temp;
+            });
         }
 
         function openRoom(roomId) {
@@ -998,7 +1026,7 @@
             }
         }
 
-        // --- 3. MANAJEMEN POP-UP (MODAL) ---
+        // --- 3. MANAJEMEN POP-UP (MODAL) & MODE MARKETPLACE ---
         const wajibBacaModal = document.getElementById('wajibBacaModal');
         function openWajibBacaModal() { wajibBacaModal.classList.add('active'); }
         function closeWajibBacaModal() { wajibBacaModal.classList.remove('active'); }
@@ -1022,22 +1050,34 @@
 
         let isMarketplaceMode = false;
         
-        // Deteksi Link Shopee/TikTok saat web dibuka (?klaim=market)
+        // 🟢 DETEKSI OTOMATIS LINK #form SAAT WEB DIBUKA
         window.addEventListener('DOMContentLoaded', function() {
-            const urlParams = new URLSearchParams(window.location.search);
-            if (urlParams.get('klaim') === 'market') {
+            if (window.location.hash === '#form') {
                 isMarketplaceMode = true;
+                
+                // Sembunyikan seluruh halaman (Lobby & Room)
+                document.getElementById('lobby').style.display = 'none';
+                document.querySelectorAll('.ea-room').forEach(room => room.style.display = 'none');
                 
                 // Set UI form khusus Marketplace
                 document.getElementById('payment-info').style.display = 'none';
                 document.getElementById('sumber-order-group').style.display = 'block';
                 document.getElementById('sumber_order').setAttribute('required', 'true');
                 
-                // Ganti tipe input paket menjadi dropdown tanpa harga
+                // Ubah Tampilan Paket
                 document.getElementById('group-paket-normal').style.display = 'none';
                 document.getElementById('group-paket-market').style.display = 'block';
                 document.getElementById('market_val_paket').setAttribute('required', 'true');
                 document.getElementById('val_paket').removeAttribute('required');
+
+                // Ubah Tampilan EA (Dropdown)
+                document.getElementById('group-ea-normal').style.display = 'none';
+                document.getElementById('group-ea-market').style.display = 'block';
+                document.getElementById('market_val_ea').setAttribute('required', 'true');
+                document.getElementById('val_ea').removeAttribute('required');
+                
+                // Buka Form Otomatis
+                formModal.classList.add('active');
             }
         });
 
@@ -1053,13 +1093,21 @@
             }
 
             inputEa.value = eaName;
-            inputPaket.value = packageResult; // Untuk mode normal
-            inputMt5.value = ''; // Wajib kosong untuk diisi
+            document.getElementById('market_val_ea').value = eaName; // Sinkronkan jika di market mode
+            inputPaket.value = packageResult;
+            inputMt5.value = ''; 
             
             formModal.classList.add('active');
         }
 
-        function closeFormModal() { formModal.classList.remove('active'); }
+        function closeFormModal() { 
+            formModal.classList.remove('active'); 
+            // Jika pembeli dari #form menutup pop-up, kita munculkan kembali halaman utama
+            if (window.location.hash === '#form') {
+                showLobbyElement();
+                window.history.replaceState({ room: 'lobby' }, '', window.location.pathname);
+            }
+        }
 
         // Tutup modal klik luar
         window.addEventListener('click', function(e) {
@@ -1088,17 +1136,17 @@
 
             const formData = new FormData(form);
             const nama = formData.get('nama');
-            const ea = formData.get('pilihan_ea');
             const wa = formData.get('no_wa');
             const email = formData.get('email');
             const mt5 = formData.get('no_mt5');
             
-            // Ambil value paket sesuai mode web yang sedang aktif
+            // 🟢 Ambil Data Dinamis (Normal VS Marketplace)
+            const ea = isMarketplaceMode ? document.getElementById('market_val_ea').value : formData.get('pilihan_ea');
             const paket = isMarketplaceMode ? document.getElementById('market_val_paket').value : formData.get('pilihan_paket');
             const sumber = formData.get('sumber_order');
 
-            // Set Data untuk dikirim ke Spreadsheet (Menimpa pilihan_paket jika dari Marketplace)
             if (isMarketplaceMode) {
+                formData.set('pilihan_ea', ea);
                 formData.set('pilihan_paket', paket);
             }
 
@@ -1117,7 +1165,6 @@
                 }
             }
 
-            // LINK GOOGLE SHEET ANDA
             const URL_GOOGLE_SHEET = 'https://script.google.com/macros/s/AKfycbwHUkRHa4COqQZ4W8cNLyZMnVJvF7zcsQZta6IX_CzGtPwYjFrtc4OVR2IpcFrsS8Zr/exec';
             
             fetch(URL_GOOGLE_SHEET, {
