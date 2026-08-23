@@ -1339,15 +1339,35 @@
                 }
             }
 
-            const URL_GOOGLE_SHEET = 'https://script.google.com/macros/s/AKfycbwHUkRHa4COqQZ4W8cNLyZMnVJvF7zcsQZta6IX_CzGtPwYjFrtc4OVR2IpcFrsS8Zr/exec';
+            // --- JALUR BARU: KIRIM KE API VERCEL (SUPABASE) ---
+            const URL_API_DAFTAR = 'https://jaringcuan.net/api/daftar';
             
-            fetch(URL_GOOGLE_SHEET, {
+            const dataPendaftaran = {
+                akun_mt5: mt5,
+                nama_klien: nama,
+                no_wa: wa,
+                email: email,
+                pilihan_ea: ea,
+                pilihan_paket: paket
+            };
+
+            fetch(URL_API_DAFTAR, {
                 method: 'POST',
-                mode: 'no-cors',
-                body: new URLSearchParams(formData).toString(),
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
+                body: JSON.stringify(dataPendaftaran),
+                headers: { 'Content-Type': 'application/json' }
             })
-            .then(() => {
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "GAGAL") {
+                    // Jika ditolak (Misal karena nomor MT5 sudah ada)
+                    alert("Mohon Maaf: " + data.pesan);
+                    submitBtn.innerText = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '1';
+                    return; // Jangan arahkan ke WA, berhenti di sini
+                }
+                
+                // Jika sukses masuk Supabase, arahkan ke WA Admin
                 const noAdmin = '6285178755343'; 
                 window.location.href = `https://wa.me/${noAdmin}?text=${encodeURIComponent(teksWA)}`;
                 submitBtn.innerText = originalText;
@@ -1356,14 +1376,10 @@
                 closeFormModal();
             })
             .catch(error => {
-                alert('Sistem sedang mengalihkan Anda ke WhatsApp Admin...');
+                alert('Terjadi kesalahan jaringan, mengalihkan ke WhatsApp Admin...');
                 const noAdmin = '6285178755343'; 
                 window.location.href = `https://wa.me/${noAdmin}?text=${encodeURIComponent(teksWA)}`;
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
             });
-        });
-    </script>
-</body>
-</html>
