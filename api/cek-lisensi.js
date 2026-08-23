@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
 
     try {
         // PERHATIKAN: Nama tabel disesuaikan dengan spasi (%20)
-        const url = `${SUPABASE_URL}/rest/v1/lisensi%20ea?akun_mt5=eq.${akun}&select=*`;
+        const url = `${SUPABASE_URL}/rest/v1/lisensi_ea?akun_mt5=eq.${akun}&select=*`;
         const response = await fetch(url, {
             headers: {
                 "apikey": SUPABASE_KEY,
