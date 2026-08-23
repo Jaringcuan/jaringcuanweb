@@ -766,8 +766,8 @@
         <h2 class="section-room-title">Ruang Riset: <span>iZONE ULTIMATE</span></h2>
         
         <div class="video-container">
-            <div class="video-wrapper" style="background: rgba(15, 23, 42, 0.8); display: flex; align-items: center; justify-content: center;">
-                <p class="video-placeholder">Video Demo Sedang Dalam Tahap Produksi...</p>
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Hsl-fcqRneU" title="Demo iZONE ULTIMATE" loading="lazy" allowfullscreen></iframe>
             </div>
         </div>
 
@@ -1095,15 +1095,23 @@
             }
         }
 
-        // --- 1. LOGIKA FAQ ACCORDION ---
+        // --- 1. LOGIKA FAQ ACCORDION (Diperbarui: Single Accordion) ---
         const accordions = document.querySelectorAll('.faq-question');
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
-                this.classList.toggle('active');
-                const panel = this.nextElementSibling;
-                if (panel.style.maxHeight) {
-                    panel.style.maxHeight = null;
-                } else {
+                // Mengecek apakah pertanyaan ini sedang terbuka
+                const isActive = this.classList.contains('active');
+                
+                // Menutup semua jawaban terlebih dahulu
+                accordions.forEach(otherAcc => {
+                    otherAcc.classList.remove('active');
+                    otherAcc.nextElementSibling.style.maxHeight = null;
+                });
+                
+                // Jika pertanyaan ini sebelumnya tertutup, maka buka
+                if (!isActive) {
+                    this.classList.add('active');
+                    const panel = this.nextElementSibling;
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
