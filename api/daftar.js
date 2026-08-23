@@ -30,7 +30,7 @@ module.exports = async (req, res) => {
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16bXZvYXZzcmxhc2preG9yemhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0NjIyNzIsImV4cCI6MjEwMzAzODI3Mn0.BFpJLp6hTw0jbNX5fDvhxTvtg8K4u1n00wsSXqdST_E"; 
 
     try {
-        const url = `${SUPABASE_URL}/rest/v1/lisensi%20ea`;
+        const url = `${SUPABASE_URL}/rest/v1/lisensi_ea`;
         
         const response = await fetch(url, {
             method: 'POST',
