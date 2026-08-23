@@ -14,7 +14,7 @@ module.exports = async (req, res) => {
 
     // KUNCI RAHASIA SUPABASE (Ganti dengan kuncimu sendiri)
     const SUPABASE_URL = "https://mzmvoavsrlasjkxorzhe.supabase.co"; 
-    const SUPABASE_KEY = "PASTE_SUPABASE_KEY_KAMU_DI_SINI"; 
+    const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16bXZvYXZzcmxhc2preG9yemhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0NjIyNzIsImV4cCI6MjEwMzAzODI3Mn0.BFpJLp6hTw0jbNX5fDvhxTvtg8K4u1n00wsSXqdST_E"; 
 
     try {
         // 4. URL untuk memasukkan data ke tabel "lisensi ea"
