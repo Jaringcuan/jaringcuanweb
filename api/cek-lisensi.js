@@ -7,9 +7,9 @@ export default async function handler(req, res) {
 
     // =========================================================================
     // PASTIKAN ANDA MENGGANTI TULISAN DI BAWAH INI DENGAN PROJECT URL SUPABASE ANDA
-    // (Bentuknya seperti: "https://mzmvoavsrlasjkxorzhe.supabase.co";
+    // (Bentuknya seperti: "https://mzmvoavsrlasjkxorzhe.supabase.co"
     // =========================================================================
-    const SUPABASE_URL = const SUPABASE_URL = "https://mzmvoavsrlasjkxorzhe.supabase.co](https://mzmvoavsrlasjkxorzhe.supabase.co)";
+    const SUPABASE_URL = const SUPABASE_URL = "https://mzmvoavsrlasjkxorzhe.supabase.co";
     
     // API Key Anda sudah saya masukkan di bawah ini:
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16bXZvYXZzcmxhc2preG9yemhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0NjIyNzIsImV4cCI6MjEwMzAzODI3Mn0.BFpJLp6hTw0jbNX5fDvhxTvtg8K4u1n00wsSXqdST_E";
