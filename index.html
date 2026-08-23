@@ -1088,6 +1088,8 @@
     <!-- 🟢 SCRIPT LOGIKA JAVASCRIPT UTAMA -->
     <!-- ======================================================= -->
     <script>
+        console.log("Jaring Cuan Script Memuat...");
+
         // --- 0. GOOGLE ANALYTICS EVENT TRACKER HELPER ---
         function trackEvent(eventName, params = {}) {
             if (typeof gtag === 'function') {
@@ -1095,20 +1097,17 @@
             }
         }
 
-        // --- 1. LOGIKA FAQ ACCORDION (Diperbarui: Single Accordion) ---
+        // --- 1. LOGIKA FAQ ACCORDION ---
         const accordions = document.querySelectorAll('.faq-question');
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
-                // Mengecek apakah pertanyaan ini sedang terbuka
                 const isActive = this.classList.contains('active');
                 
-                // Menutup semua jawaban terlebih dahulu
                 accordions.forEach(otherAcc => {
                     otherAcc.classList.remove('active');
                     otherAcc.nextElementSibling.style.maxHeight = null;
                 });
                 
-                // Jika pertanyaan ini sebelumnya tertutup, maka buka
                 if (!isActive) {
                     this.classList.add('active');
                     const panel = this.nextElementSibling;
@@ -1125,7 +1124,6 @@
             isMarketplaceMode = true;
         }
 
-        // Logika Anti-Keluar (Menyapu URL)
         window.history.replaceState({ room: 'lobby' }, '', window.location.pathname);
         
         window.addEventListener('popstate', function(event) {
@@ -1136,13 +1134,11 @@
             }
         });
 
-        // EKSEKUSI FORM #form SETELAH HALAMAN SIAP
         window.addEventListener('DOMContentLoaded', function() {
             if (isMarketplaceMode) {
                 document.getElementById('lobby').style.display = 'none';
                 document.querySelectorAll('.ea-room').forEach(room => room.style.display = 'none');
                 
-                // Form khusus Marketplace (Hapus BCA)
                 document.getElementById('payment-info').style.display = 'none';
                 document.getElementById('sumber-order-group').style.display = 'block';
                 document.getElementById('sumber_order').setAttribute('required', 'true');
@@ -1180,7 +1176,6 @@
             document.getElementById('lobby').style.display = 'block';
             window.scrollTo(0, 0);
             
-            // Hentikan Video YouTube saat kembali ke Lobby
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
                 let temp = iframe.src;
@@ -1257,7 +1252,6 @@
                 const priceElement = card.querySelector('.price');
                 let priceText = priceElement.innerText.replace(/\n/g, ' ').trim();
                 
-                // Buang coretan harga (opsional jika ada)
                 const coret = priceElement.querySelector('.price-coret');
                 if (coret) {
                     priceText = priceText.replace(coret.innerText, '').trim();
@@ -1289,7 +1283,7 @@
             if (e.target === formModal) closeFormModal();
         });
 
-       // --- 5. SUBMIT GOOGLE SHEET & WHATSAPP (KEMBALI KE ASLI) ---
+        // --- 5. JALUR BARU: KIRIM KE API VERCEL (SUPABASE) ---
         const form = document.getElementById('form-klaim');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
@@ -1312,24 +1306,21 @@
             const email = formData.get('email');
             const mt5 = formData.get('no_mt5');
             
-            const ea = isMarketplaceMode ? document.getElementById('market_val_ea').value : formData.get('pilihan_ea');
-            const paket = isMarketplaceMode ? document.getElementById('market_val_paket').value : formData.get('pilihan_paket');
+            let ea = formData.get('pilihan_ea');
+            let paket = formData.get('pilihan_paket');
             const sumber = formData.get('sumber_order');
 
             if (isMarketplaceMode) {
-                formData.set('pilihan_ea', ea);
-                formData.set('pilihan_paket', paket);
+                ea = document.getElementById('market_val_ea').value;
+                paket = document.getElementById('market_val_paket').value;
             }
             
             trackEvent('submit_order_sukses', {ea_terpilih: ea, paket_terpilih: paket});
 
-            // LOGIKA PESAN WA ASLI
             let teksWA = "";
-
             if (isMarketplaceMode) {
                 teksWA = `🚨 *[ KLAIM MARKETPLACE ]* 🚨\nHalo Admin, saya sudah order EA via Aplikasi dan mengisi form aktivasi.\n\nSumber Order: ${sumber}\nProduk: *${ea}*\nPaket: *${paket}*\n\nNama: ${nama}\nNo WA: ${wa}\nEmail: ${email}\nID MT5: ${mt5}\n\n*Pembayaran sudah diselesaikan via ${sumber}, mohon segera proses License Key saya.*`;
-            } 
-            else {
+            } else {
                 teksWA = `Halo Admin, saya memesan Lisensi EA.\n\nProduk: *${ea}*\nPaket: *${paket}*\n\nNama: ${nama}\nNo WA: ${wa}\nEmail: ${email}\nID MT5: ${mt5}`;
 
                 if (paket.includes('Kemitraan') || paket.includes('Ekosistem') || paket.includes('Subsidi')) {
@@ -1339,7 +1330,6 @@
                 }
             }
 
-            // --- JALUR BARU: KIRIM KE API VERCEL (SUPABASE) ---
             const URL_API_DAFTAR = 'https://jaringcuan.net/api/daftar';
             
             const dataPendaftaran = {
@@ -1359,15 +1349,13 @@
             .then(response => response.json())
             .then(data => {
                 if (data.status === "GAGAL") {
-                    // Jika ditolak (Misal karena nomor MT5 sudah ada)
                     alert("Mohon Maaf: " + data.pesan);
                     submitBtn.innerText = originalText;
                     submitBtn.disabled = false;
                     submitBtn.style.opacity = '1';
-                    return; // Jangan arahkan ke WA, berhenti di sini
+                    return; 
                 }
                 
-                // Jika sukses masuk Supabase, arahkan ke WA Admin
                 const noAdmin = '6285178755343'; 
                 window.location.href = `https://wa.me/${noAdmin}?text=${encodeURIComponent(teksWA)}`;
                 submitBtn.innerText = originalText;
@@ -1384,3 +1372,6 @@
                 submitBtn.style.opacity = '1';
             });
         });
+    </script>
+</body>
+</html>
