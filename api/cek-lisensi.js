@@ -19,11 +19,13 @@ module.exports = async (req, res) => {
 
         const data = await response.json();
 
-        if (data.error) {
-            return res.status(200).json({ status: "ERROR_DATABASE", detail: data.error });
+        // Cek jika Supabase menolak karena salah nama tabel/kolom
+        if (!Array.isArray(data)) {
+            return res.status(200).json({ status: "SUPABASE_REJECT", detail: data });
         }
 
-        if (!data || data.length === 0) {
+        // Jika nomor akun tidak ditemukan di tabel
+        if (data.length === 0) {
             return res.status(200).json({ status: "TIDAK_TERDAFTAR" });
         }
 
@@ -50,11 +52,9 @@ module.exports = async (req, res) => {
         return res.status(200).json({ status: "AKTIF" });
 
     } catch (error) {
-        // INI BAGIAN YANG SAYA UBAH AGAR MESINNYA "BUKA MULUT"
         return res.status(500).json({ 
             status: "ERROR_SISTEM", 
-            pesan_asli: error.message,
-            tipe_error: error.name
+            pesan_asli: error.message 
         });
     }
 };
