@@ -766,8 +766,8 @@
         <h2 class="section-room-title">Ruang Riset: <span>iZONE ULTIMATE</span></h2>
         
         <div class="video-container">
-            <div class="video-wrapper">
-                <iframe src="https://www.youtube.com/embed/Hsl-fcqRneU" title="Demo iZONE ULTIMATE" loading="lazy" allowfullscreen></iframe>
+            <div class="video-wrapper" style="background: rgba(15, 23, 42, 0.8); display: flex; align-items: center; justify-content: center;">
+                <p class="video-placeholder">Video Demo Sedang Dalam Tahap Produksi...</p>
             </div>
         </div>
 
@@ -1085,37 +1085,39 @@
     </div>
 
     <!-- ======================================================= -->
-    <!-- 🟢 SCRIPT LOGIKA JAVASCRIPT UTAMA (MODE DETEKTIF) -->
+    <!-- 🟢 SCRIPT LOGIKA JAVASCRIPT UTAMA -->
     <!-- ======================================================= -->
     <script>
-        console.log("Jaring Cuan Script Memuat...");
-
+        // --- 0. GOOGLE ANALYTICS EVENT TRACKER HELPER ---
         function trackEvent(eventName, params = {}) {
             if (typeof gtag === 'function') {
                 gtag('event', eventName, params);
             }
         }
 
+        // --- 1. LOGIKA FAQ ACCORDION ---
         const accordions = document.querySelectorAll('.faq-question');
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
-                const isActive = this.classList.contains('active');
-                accordions.forEach(otherAcc => {
-                    otherAcc.classList.remove('active');
-                    otherAcc.nextElementSibling.style.maxHeight = null;
-                });
-                if (!isActive) {
-                    this.classList.add('active');
-                    const panel = this.nextElementSibling;
+                this.classList.toggle('active');
+                const panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
                     panel.style.maxHeight = panel.scrollHeight + "px";
                 }
             });
         });
 
+        // --- 2. DETEKSI OTOMATIS LINK #form (MARKETPLACE MODE) ---
         let isMarketplaceMode = false;
         const currentHash = window.location.hash;
-        if (currentHash === '#form') isMarketplaceMode = true;
+        
+        if (currentHash === '#form') {
+            isMarketplaceMode = true;
+        }
 
+        // Logika Anti-Keluar (Menyapu URL)
         window.history.replaceState({ room: 'lobby' }, '', window.location.pathname);
         
         window.addEventListener('popstate', function(event) {
@@ -1126,11 +1128,13 @@
             }
         });
 
+        // EKSEKUSI FORM #form SETELAH HALAMAN SIAP
         window.addEventListener('DOMContentLoaded', function() {
             if (isMarketplaceMode) {
                 document.getElementById('lobby').style.display = 'none';
                 document.querySelectorAll('.ea-room').forEach(room => room.style.display = 'none');
                 
+                // Form khusus Marketplace (Hapus BCA)
                 document.getElementById('payment-info').style.display = 'none';
                 document.getElementById('sumber-order-group').style.display = 'block';
                 document.getElementById('sumber_order').setAttribute('required', 'true');
@@ -1149,6 +1153,7 @@
 
                 const formModal = document.getElementById('formModal');
                 formModal.classList.add('active');
+                
                 trackEvent('buka_form_marketplace');
             }
         });
@@ -1167,6 +1172,7 @@
             document.getElementById('lobby').style.display = 'block';
             window.scrollTo(0, 0);
             
+            // Hentikan Video YouTube saat kembali ke Lobby
             const iframes = document.querySelectorAll('iframe');
             iframes.forEach(iframe => {
                 let temp = iframe.src;
@@ -1185,6 +1191,7 @@
             window.history.pushState({ room: 'lobby' }, '', window.location.pathname);
         }
 
+        // --- 3. FUNGSI COPY KLASIK ---
         function copyText(text, btnElement) {
             const originalText = btnElement.innerHTML;
             function fallbackCopy(textToCopy) {
@@ -1210,6 +1217,7 @@
             }
         }
 
+        // --- 4. MANAJEMEN POP-UP (MODAL) ---
         const wajibBacaModal = document.getElementById('wajibBacaModal');
         function openWajibBacaModal() { wajibBacaModal.classList.add('active'); }
         function closeWajibBacaModal() { wajibBacaModal.classList.remove('active'); }
@@ -1240,8 +1248,13 @@
             if (!isMarketplaceMode) {
                 const priceElement = card.querySelector('.price');
                 let priceText = priceElement.innerText.replace(/\n/g, ' ').trim();
+                
+                // Buang coretan harga (opsional jika ada)
                 const coret = priceElement.querySelector('.price-coret');
-                if (coret) priceText = priceText.replace(coret.innerText, '').trim();
+                if (coret) {
+                    priceText = priceText.replace(coret.innerText, '').trim();
+                }
+                
                 packageResult = `${packageName} (${priceText})`;
             }
 
@@ -1249,6 +1262,7 @@
             document.getElementById('market_val_ea').value = eaName; 
             inputPaket.value = packageResult;
             inputMt5.value = ''; 
+            
             formModal.classList.add('active');
         }
 
@@ -1267,14 +1281,14 @@
             if (e.target === formModal) closeFormModal();
         });
 
-        // --- 5. JALUR BARU: API VERCEL (MODE DETEKTIF) ---
+        // --- 5. SUBMIT GOOGLE SHEET & WHATSAPP (KEMBALI KE ASLI) ---
         const form = document.getElementById('form-klaim');
         form.addEventListener('submit', function(e) {
             e.preventDefault();
             
             const honeypot = document.getElementById('hp_trap').value;
             if (honeypot !== "") {
-                alert("Aktivitas mencurigakan diblokir.");
+                alert("Sistem mendeteksi aktivitas mencurigakan. Permintaan diblokir.");
                 return false;
             }
 
@@ -1289,53 +1303,43 @@
             const wa = formData.get('no_wa');
             const email = formData.get('email');
             const mt5 = formData.get('no_mt5');
-            let ea = formData.get('pilihan_ea');
-            let paket = formData.get('pilihan_paket');
+            
+            const ea = isMarketplaceMode ? document.getElementById('market_val_ea').value : formData.get('pilihan_ea');
+            const paket = isMarketplaceMode ? document.getElementById('market_val_paket').value : formData.get('pilihan_paket');
             const sumber = formData.get('sumber_order');
 
             if (isMarketplaceMode) {
-                ea = document.getElementById('market_val_ea').value;
-                paket = document.getElementById('market_val_paket').value;
+                formData.set('pilihan_ea', ea);
+                formData.set('pilihan_paket', paket);
+            }
+            
+            trackEvent('submit_order_sukses', {ea_terpilih: ea, paket_terpilih: paket});
+
+            // LOGIKA PESAN WA ASLI
+            let teksWA = "";
+
+            if (isMarketplaceMode) {
+                teksWA = `🚨 *[ KLAIM MARKETPLACE ]* 🚨\nHalo Admin, saya sudah order EA via Aplikasi dan mengisi form aktivasi.\n\nSumber Order: ${sumber}\nProduk: *${ea}*\nPaket: *${paket}*\n\nNama: ${nama}\nNo WA: ${wa}\nEmail: ${email}\nID MT5: ${mt5}\n\n*Pembayaran sudah diselesaikan via ${sumber}, mohon segera proses License Key saya.*`;
+            } 
+            else {
+                teksWA = `Halo Admin, saya memesan Lisensi EA.\n\nProduk: *${ea}*\nPaket: *${paket}*\n\nNama: ${nama}\nNo WA: ${wa}\nEmail: ${email}\nID MT5: ${mt5}`;
+
+                if (paket.includes('Kemitraan') || paket.includes('Ekosistem') || paket.includes('Subsidi')) {
+                    teksWA += `\n\n*Saya sudah daftar Exness di bawah IB Jaring Cuan dan berikut lampiran bukti transfer server:*`;
+                } else {
+                    teksWA += `\n\n*Berikut saya lampirkan foto bukti transfer lisensi saya:*`;
+                }
             }
 
-            let teksWA = `Halo Admin, saya memesan Lisensi EA.\n\nProduk: *${ea}*\nPaket: *${paket}*\n\nNama: ${nama}\nNo WA: ${wa}\nEmail: ${email}\nID MT5: ${mt5}`;
-
-            const URL_API_DAFTAR = '/api/daftar';
+            const URL_GOOGLE_SHEET = 'https://script.google.com/macros/s/AKfycbwHUkRHa4COqQZ4W8cNLyZMnVJvF7zcsQZta6IX_CzGtPwYjFrtc4OVR2IpcFrsS8Zr/exec';
             
-            const dataPendaftaran = {
-                akun_mt5: mt5,
-                nama_klien: nama,
-                no_wa: wa,
-                email: email,
-                pilihan_ea: ea,
-                pilihan_paket: paket
-            };
-
-            fetch(URL_API_DAFTAR, {
+            fetch(URL_GOOGLE_SHEET, {
                 method: 'POST',
-                body: JSON.stringify(dataPendaftaran),
-                headers: { 'Content-Type': 'application/json' }
+                mode: 'no-cors',
+                body: new URLSearchParams(formData).toString(),
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
             })
-            .then(async (response) => {
-                // DETEKTIF: Membaca teks asli dari server sebelum diubah ke JSON
-                const textRes = await response.text();
-                try {
-                    return JSON.parse(textRes);
-                } catch (err) {
-                    throw new Error("SERVER CRASH:\n" + textRes.substring(0, 150));
-                }
-            })
-            .then(data => {
-                // Jika server merespons dengan status Gagal / Error
-                if (data.status === "GAGAL" || data.status === "ERROR_SISTEM") {
-                    alert("⛔ SISTEM MENOLAK:\n" + data.pesan + "\n\nDetail: " + JSON.stringify(data.detail || data.pesan_asli || ""));
-                    submitBtn.innerText = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.opacity = '1';
-                    return; 
-                }
-                
-                alert("✅ Pendaftaran Berhasil! Anda akan segera dialihkan ke WhatsApp Admin...".);
+            .then(() => {
                 const noAdmin = '6285178755343'; 
                 window.location.href = `https://wa.me/${noAdmin}?text=${encodeURIComponent(teksWA)}`;
                 submitBtn.innerText = originalText;
@@ -1344,8 +1348,9 @@
                 closeFormModal();
             })
             .catch(error => {
-                // DETEKTIF: Memunculkan Pop-up Error Asli
-                alert('🚨 MODE DETEKTIF MENEMUKAN ERROR:\n\n' + error.message);
+                alert('Sistem sedang mengalihkan Anda ke WhatsApp Admin...');
+                const noAdmin = '6285178755343'; 
+                window.location.href = `https://wa.me/${noAdmin}?text=${encodeURIComponent(teksWA)}`;
                 submitBtn.innerText = originalText;
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
