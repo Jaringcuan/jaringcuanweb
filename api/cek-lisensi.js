@@ -9,7 +9,8 @@ module.exports = async (req, res) => {
     const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im16bXZvYXZzcmxhc2preG9yemhlIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODc0NjIyNzIsImV4cCI6MjEwMzAzODI3Mn0.BFpJLp6hTw0jbNX5fDvhxTvtg8K4u1n00wsSXqdST_E";
 
     try {
-        const url = `${SUPABASE_URL}/rest/v1/lisensi_ea?akun_mt5=eq.${akun}&select=*`;
+        // PERHATIKAN: Nama tabel disesuaikan dengan spasi (%20)
+        const url = `${SUPABASE_URL}/rest/v1/lisensi%20ea?akun_mt5=eq.${akun}&select=*`;
         const response = await fetch(url, {
             headers: {
                 "apikey": SUPABASE_KEY,
@@ -19,12 +20,10 @@ module.exports = async (req, res) => {
 
         const data = await response.json();
 
-        // Cek jika Supabase menolak karena salah nama tabel/kolom
         if (!Array.isArray(data)) {
             return res.status(200).json({ status: "SUPABASE_REJECT", detail: data });
         }
 
-        // Jika nomor akun tidak ditemukan di tabel
         if (data.length === 0) {
             return res.status(200).json({ status: "TIDAK_TERDAFTAR" });
         }
