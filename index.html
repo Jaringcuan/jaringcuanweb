@@ -989,19 +989,19 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label>Nama Lengkap</label>
+                    <label>nama</label>
                     <input type="text" id="trial_nama" required placeholder="Nama Anda">
                 </div>
                 <div class="form-group">
-                    <label>Nomor WhatsApp</label>
+                    <label>no_wa</label>
                     <input type="tel" id="trial_wa" required placeholder="Contoh: 08123456789" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 </div>
                 <div class="form-group">
-                    <label>Email Anda</label>
+                    <label>email</label>
                     <input type="email" id="trial_email" required placeholder="contoh@email.com">
                 </div>
                 <div class="form-group">
-                    <label>Nomor Akun MT5 (Real/Demo)</label>
+                    <label>account_number (Real/Demo)</label>
                     <input type="text" inputmode="numeric" id="trial_mt5" required placeholder="Min. 6 Digit Angka" pattern="[0-9]{6,}" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
                 </div>
 
@@ -1451,7 +1451,7 @@
 
             try {
                 // Sang Pelayan berlari ke Vercel membawa data
-                const response = await fetch('https://api-lisensi-ea.vercel.app/api', {
+                const response = await fetch('https://api-lisensi-ea.vercel.app/api/daftar_trial', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify(dataKirimTrial)
