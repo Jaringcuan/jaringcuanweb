@@ -166,7 +166,7 @@
         /* 💰 TABEL HARGA PROFESIONAL (GRID SYSTEM & SEJAJAR) */
         /* ======================================================= */
         .pricing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; align-items: stretch; }
-        .pricing-list.single-card { max-width: 450px; margin: 0 auto; display: flex; justify-content: center; } 
+        .pricing-list.single-card { max-width: 450px; margin: 0 auto; display: flex; justify-content: center; } /* Khusus Liga Pair */
         
         .price-card { padding: 40px 30px; text-align: left; position: relative; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: 0.3s; width: 100%; }
         
@@ -191,7 +191,7 @@
         
         /* Modifikasi Annual Pro (Center Stage/Menyala) */
         .price-card.annual { border: 2px solid var(--primary); transform: scale(1.03); z-index: 2; background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15); }
-        .pricing-list.single-card .price-card.annual { transform: scale(1); z-index: 1; } 
+        .pricing-list.single-card .price-card.annual { transform: scale(1); z-index: 1; } /* Reset scale untuk Liga Pair */
         
         /* Modifikasi Subsidi IB (Full Width Bawah) */
         .price-card.subsidi { grid-column: 1 / -1; max-width: 750px; margin: 20px auto 0 auto; border-color: rgba(59, 130, 246, 0.4); }
@@ -315,16 +315,6 @@
         <div class="section">
             <h1 class="hero-title">Teknologi Algoritma Institusi.<br>Kini di Tangan <span>Anda</span>.</h1>
             <p class="hero-subtitle">Tinggalkan cara lama yang dikendalikan oleh ketakutan dan keserakahan. Jaring Cuan menghadirkan ekosistem Asisten Trading dan Full-Autotrade berbasis probabilitas matematika tinggi. 100% rasional. 100% presisi.</p>
-            
-            <!-- 🟢 TOMBOL TRIAL GRATIS -->
-            <div style="text-align: center; margin-top: 35px; margin-bottom: 2rem;">
-                <button class="btn btn-primary btn-pulse" style="font-size: 1.15rem; padding: 15px 35px; background: linear-gradient(180deg, #22d3ee 0%, #0284c7 100%); box-shadow: 0 4px 15px rgba(34, 211, 238, 0.4); border: none; border-radius: 50px; font-weight: 800; letter-spacing: 1px;" onclick="bukaModalTrial()">
-                    ⚡ MULAI TRIAL GRATIS SEKARANG
-                </button>
-                <p style="color: #94a3b8; font-size: 0.9rem; margin-top: 12px; font-style: italic;">
-                    *Tanpa kartu kredit. Langsung aktif di akun MT5 Anda.
-                </p>
-            </div>
             
             <!-- 🟢 3 PILAR KEPERCAYAAN -->
             <div class="trust-pillars">
@@ -964,55 +954,6 @@
     </footer>
 
     <!-- ======================================================= -->
-    <!-- 📑 MODAL POP-UP KHUSUS TRIAL EA -->
-    <!-- ======================================================= -->
-    <div class="modal-overlay" id="modalTrial">
-        <div class="modal-content">
-            <button class="modal-close" onclick="tutupModalTrial()">×</button>
-            <h3 style="color: #22d3ee; border-bottom: 1px solid rgba(34, 211, 238, 0.3); padding-bottom: 10px; margin-bottom: 15px;">
-                Aktivasi Trial Sistem
-            </h3>
-            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 20px;">
-                Silakan isi data berikut. Sistem server kami akan otomatis memberikan akses lisensi ke Nomor MT5 Anda.
-            </p>
-            
-            <form id="form-trial-ea">
-                <div class="form-group">
-                    <label>ea_name </label>
-                    <select id="trial_ea" required style="cursor: pointer;">
-                        <option value="" disabled selected>-- Pilih EA yang ingin di-uji coba --</option>
-                        <option value="iSCALP PRO">iSCALP PRO</option>
-                        <option value="QUANTUM APEX">QUANTUM APEX</option>
-                        <option value="MOMENTUM CANDLE">MOMENTUM CANDLE</option>
-                        <option value="iZONE ULTIMATE">iZONE ULTIMATE</option>
-                        <option value="QUANTUM ULTIMATE">QUANTUM ULTIMATE</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>nama</label>
-                    <input type="text" id="trial_nama" required placeholder="Nama Anda">
-                </div>
-                <div class="form-group">
-                    <label>no_wa</label>
-                    <input type="tel" id="trial_wa" required placeholder="Contoh: 08123456789" pattern="[0-9]+" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                </div>
-                <div class="form-group">
-                    <label>email</label>
-                    <input type="email" id="trial_email" required placeholder="contoh@email.com">
-                </div>
-                <div class="form-group">
-                    <label>account_number (Real/Demo)</label>
-                    <input type="text" inputmode="numeric" id="trial_mt5" required placeholder="Min. 6 Digit Angka" pattern="[0-9]{6,}" oninput="this.value = this.value.replace(/[^0-9]/g, '')">
-                </div>
-
-                <button type="submit" id="btn-submit-trial" class="btn btn-primary btn-block" style="background: linear-gradient(180deg, #22d3ee 0%, #0284c7 100%); box-shadow: 0 4px 15px rgba(34, 211, 238, 0.4); font-size: 1.1rem; padding: 15px; margin-top: 20px;">
-                    Aktifkan Mesin Sekarang
-                </button>
-            </form>
-        </div>
-    </div>
-
-    <!-- ======================================================= -->
     <!-- 📑 MODAL POP-UP WAJIB BACA -->
     <!-- ======================================================= -->
     <div class="modal-overlay" id="wajibBacaModal">
@@ -1346,7 +1287,6 @@
             if (e.target === wajibBacaModal) closeWajibBacaModal();
             if (e.target === referralModal) closeReferralModal();
             if (e.target === formModal) closeFormModal();
-            if (e.target === modalTrial) tutupModalTrial(); // Logika klik luar khusus trial
         });
 
         // --- 5. SUBMIT GOOGLE SHEET & WHATSAPP (KEMBALI KE ASLI) ---
@@ -1423,59 +1363,6 @@
                 submitBtn.disabled = false;
                 submitBtn.style.opacity = '1';
             });
-        });
-
-        // --- 6. LOGIKA FORM TRIAL EA (KONEKSI KE VERCEL & SUPABASE) ---
-        const modalTrial = document.getElementById('modalTrial');
-        function bukaModalTrial() { modalTrial.classList.add('active'); }
-        function tutupModalTrial() { modalTrial.classList.remove('active'); }
-
-        const formTrial = document.getElementById('form-trial-ea');
-        formTrial.addEventListener('submit', async function(e) {
-            e.preventDefault(); // Mencegah web me-refresh
-            
-            // Ubah tombol jadi "Sedang Memproses..." agar klien tidak klik 2x
-            const btnSubmitTrial = document.getElementById('btn-submit-trial');
-            const teksAsliTrial = btnSubmitTrial.innerText;
-            btnSubmitTrial.innerText = '⏳ Sedang Memproses...';
-            btnSubmitTrial.disabled = true;
-
-            // Bungkus data sesuai nama yang diminta Vercel
-            const dataKirimTrial = {
-                ea_name: document.getElementById('trial_ea').value,
-                nama: document.getElementById('trial_nama').value,
-                no_wa: document.getElementById('trial_wa').value,
-                email: document.getElementById('trial_email').value,
-                account_number: document.getElementById('trial_mt5').value
-            };
-
-            try {
-                // Sang Pelayan berlari ke Vercel membawa data
-                const response = await fetch('https://api-lisensi-ea.vercel.app/api/daftar-trial', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify(dataKirimTrial)
-                });
-
-                const result = await response.json();
-
-                // Cek jawaban dari Vercel
-                if (response.ok) {
-                    alert('✅ BERHASIL!\n\nLisensi Trial Anda sudah terdaftar di server kami.\nSilakan pasang EA Jaring Cuan di akun MT5 Anda sekarang.');
-                    formTrial.reset(); // Bersihkan formulir
-                    tutupModalTrial(); // Tutup kotak
-                } else {
-                    // Jika Vercel menolak (misal: MT5 sudah pernah dipakai)
-                    alert('❌ GAGAL:\n' + (result.error || 'Terjadi kesalahan pada sistem.'));
-                }
-            } catch (error) {
-                // Jika internet putus atau Vercel mati
-                alert('❌ GAGAL:\nServer tidak merespon. Pastikan koneksi internet Anda stabil.');
-            } finally {
-                // Kembalikan tombol seperti semula
-                btnSubmitTrial.innerText = teksAsliTrial;
-                btnSubmitTrial.disabled = false;
-            }
         });
     </script>
 </body>
