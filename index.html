@@ -44,8 +44,8 @@
                 <div class="dot-blink"></div>
                 Latency: 12ms
             </div>
-            <!-- Tombol WA Header tetap target="_blank" agar membuka aplikasi WA -->
-            <a href="https://wa.me/6285178755343?text=Halo%20Admin%20Jaring%20Cuan,%20saya%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20seputar%20Asisten%20Trading..." target="_blank" class="btn btn-primary btn-header-wa" onclick="trackEvent('klik_wa_header')">
+            <!-- Target blank dihapus agar buka di tab yang sama -->
+            <a href="https://wa.me/6285178755343?text=Halo%20Admin%20Jaring%20Cuan,%20saya%20melihat%20website%20Anda%20dan%20ingin%20bertanya%20seputar%20Asisten%20Trading..." class="btn btn-primary btn-header-wa" onclick="trackEvent('klik_wa_header')">
                 <svg viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.573-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.099.824zm-3.423-14.416c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm.029 18.88c-1.161 0-2.305-.292-3.318-.844l-3.677.964 1.038-3.562c-.663-1.083-1.013-2.328-1.013-3.614 0-4.014 3.268-7.282 7.282-7.282 4.014 0 7.282 3.268 7.282 7.282 0 4.014-3.268 7.282-7.282 7.282z"/></svg>
                 Tanya Developer
             </a>
@@ -53,9 +53,10 @@
     </header>
 
     <!-- ======================================================= -->
-    <!-- 🏠 LOBI UTAMA -->
+    <!-- 🏠 LOBI UTAMA (HERO, PILLAR, COMPARE, CATALOG, FAQ) -->
     <!-- ======================================================= -->
     <section id="lobby" style="display: block;">
+        
         <div class="section">
             <h1 class="hero-title">Teknologi Algoritma Institusi.<br>Kini di Tangan <span>Anda</span>.</h1>
             <p class="hero-subtitle">Tinggalkan cara lama yang dikendalikan oleh ketakutan dan keserakahan. Jaring Cuan menghadirkan ekosistem Asisten Trading dan Full-Autotrade berbasis probabilitas matematika tinggi. 100% rasional. 100% presisi.</p>
@@ -153,7 +154,7 @@
             </div>
         </div>
 
-        <!-- ❓ FAQ SECTION -->
+        <!-- ❓ FAQ SECTION UTUH -->
         <div class="faq-section">
             <h2 class="faq-title">Pertanyaan <span>Populer</span></h2>
             
@@ -165,7 +166,78 @@
                     </div>
                 </div>
             </div>
-            <!-- (Sengaja dipersingkat agar tidak terlalu panjang, Anda bisa tambahkan FAQ lainnya jika perlu) -->
+
+            <div class="faq-item">
+                <button class="faq-question">Dari mana sumber logika dan aturan strategi (rules) EA ini berasal?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Kami <strong>membedah (reverse-engineering)</strong> cara kerja para mentor <em>trading</em> profesional yang terbukti realistis dan konsisten mencetak profit. Kami mengekstrak SOP dan gaya <em>trading</em> mereka, membuang faktor emosinya, lalu mengotomatisasinya menjadi algoritma pintar. Hasilnya: eksekusi level master yang berjalan otomatis tanpa kelelahan.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah saya bisa mengatur risiko sendiri atau semua dikontrol robot?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Jaring Cuan menggunakan <strong>Teknologi Hybrid</strong>. Anda memegang kendali penuh. Filosofi kami adalah <em>'Amankan Risiko Dahulu, Profit Kemudian'</em>. Fitur pembatasan Risiko (Risk %) dan Take Profit dapat Anda atur secara dinamis dan <em>real-time</em> langsung dari panel layar Anda.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah EA ini aman untuk ujian akun Prop-Firm?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        <strong>Sangat Direkomendasikan.</strong> Kami tahu musuh terbesar <em>Prop-Firm</em> adalah pelanggaran Drawdown harian dan rilis News. Mesin kami dilengkapi <strong>News Protector</strong> (Otomatis memblokir open posisi saat berita High Impact) serta <strong>Hard Drawdown Limiter</strong> untuk mencegah pelanggaran batas kerugian Prop-Firm Anda.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Kenapa EA Jaring Cuan tidak dijual dengan lisensi Lifetime (Seumur Hidup)?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Mari bicara realita. Sistem MT5 dan kondisi market terus <em>update</em>. Hati-hati dengan jebakan lisensi Lifetime murah di mana developer sering kabur setelah 1 tahun. Dengan sistem <strong>Annual (Tahunan)</strong>, kami memiliki tanggung jawab moral dan finansial untuk terus merawat Anda dan memperbarui logika algoritma agar selalu relevan dengan market terbaru. <em>(Catatan: Pengecualian hanya untuk produk Indikator Liga Pair).</em>
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Saya masih pemula, apakah setting-nya ribet?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Sama sekali tidak. Khusus untuk pembeli paket <strong>Annual Pro</strong>, kami menyertakan <em>Golden Preset</em> (File setelan matang). Anda cukup me-<em>load</em> file tersebut ke MT5, dan mesin akan langsung berjalan dengan konfigurasi paling optimal (Plug & Play).
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah laptop/PC saya harus menyala 24 jam nonstop?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Tidak perlu. Kami sangat menyarankan Anda menyewa VPS (Virtual Private Server) agar EA tetap bekerja mengeksekusi pasar 24 jam penuh di server cloud, meskipun laptop atau HP Anda dimatikan.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <button class="faq-question">Berapa minimal modal (balance) yang disarankan?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Anda bisa memulai dengan $50 - $100 menggunakan Akun Cent (Micro), atau $500 - $1.000 untuk Akun Standard. <em>Money management</em> adalah kunci.
+                    </div>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Apakah Jaring Cuan menjamin pasti profit setiap hari?</button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner">
+                        Hati-hati dengan vendor yang menjanjikan kaya mendadak. Trading selalu memiliki probabilitas. Kami <strong>tidak menjamin</strong> pasti untung setiap hari, TAPI kami menjamin EA ini akan mengeksekusi market secara disiplin, tanpa ragu, tanpa emosi, dan konsisten dengan sistem <em>risk-to-reward</em> yang telah diuji.
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -242,7 +314,362 @@
         <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
     </section>
 
-    <!-- (CATATAN: UNTUK ROOM EA LAINNYA, SEPERTI QUANTUM APEX, MOMENTUM CANDLE DLL, KODE HTML-NYA TETAP SAMA SEPERTI FILE ANDA SEBELUMNYA. ANDA CUKUP MENYALINNYA KE SINI AGAR TIDAK TERLALU PANJANG) -->
+    <!-- ======================================================= -->
+    <!-- 🟢 ROOM 2: QUANTUM APEX -->
+    <!-- ======================================================= -->
+    <section id="room-quantum" class="section ea-room">
+        <h2 class="section-room-title">Ruang Riset: <span>QUANTUM APEX</span></h2>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/j9-kseDRkzo" title="Demo QUANTUM APEX" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="ea-logic-box">
+            <h3>Logika Strategi Quantum Apex</h3>
+            <p>Sistem ini dirancang untuk Follow Trend & Pullback. Anda cukup menentukan arah BUY atau SELL, dan biarkan sistem cerdas kami otomatis mencari momen pantulan entry terbaik secara presisi. Dilengkapi fitur <em>Dynamic Take Profit</em> dan <em>Auto Trailing Stop</em> untuk mengamankan profit Anda.</p>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
+        <div class="pricing-list">
+            
+            <div class="price-card reguler">
+                <div class="badge-float badge-reguler">🔍 QUARTERLY STARTER</div>
+                <h4>Plan 3 Bulan</h4>
+                <div class="price">Rp 1.490.000 <span>/ 3 Bulan</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Tanpa batasan strategi.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Support Standar:</strong> Bantuan teknis WA.</li>
+                </ul>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Quarterly'}); openSmartForm(this, 'QUANTUM APEX')">Pesan Plan 3 Bulan</button>
+            </div>
+
+            <div class="price-card annual">
+                <div class="badge-float badge-annual">🔥 BEST VALUE / PRO</div>
+                <h4>Annual Pro</h4>
+                <div class="price"><span class="price-coret">Rp 5.960.000</span> Rp 3.990.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>Double Lisensi:</strong> Aktif di 2 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Golden Preset:</strong> File setting Plug & Play.</li>
+                    <li><strong>Private Request:</strong> Gratis custom fitur.</li>
+                </ul>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Annual'}); openSmartForm(this, 'QUANTUM APEX')">Pesan Annual Pro</button>
+            </div>
+
+            <div class="pricing-divider-wrap">
+                <hr class="pricing-divider">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
+                    ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
+                </button>
+            </div>
+
+            <div class="price-card subsidi">
+                <div class="badge-float badge-subsidi">🤝 JALUR SUBSIDI IB</div>
+                <h4>Paket Kemitraan Ekosistem</h4>
+                <div class="price">Rp 599.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Kualitas setara Annual Pro.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Syarat Mutlak:</strong> Wajib daftar Exness via link kami.</li>
+                    <li><strong>Biaya Aktivasi:</strong> Murni pemeliharaan server tahunan.</li>
+                </ul>
+                <div class="btn-group-wrap" style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6; flex: 1; min-width: 250px;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Exness IB</button>
+                    <button class="btn btn-primary" style="flex: 1; min-width: 250px;" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM APEX', paket: 'Subsidi IB'}); openSmartForm(this, 'QUANTUM APEX')">Langkah 2: Isi Form Aktivasi</button>
+                </div>
+            </div>
+        </div>
+        
+        <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 🟢 ROOM 3: MOMENTUM CANDLE (DENGAN MYFXBOOK) -->
+    <!-- ======================================================= -->
+    <section id="room-momentum" class="section ea-room">
+        <h2 class="section-room-title">Ruang Riset: <span>MOMENTUM CANDLE</span></h2>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/_CVq8U3unYw" title="Demo MOMENTUM CANDLE" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="ea-logic-box">
+            <h3>Logika Strategi Momentum Candle</h3>
+            <p>Sistem untuk menangkap tren besar. Memantau pasar dengan filter volatilitas <em>ATR</em> yang ketat mencari "Candle Besar". Setelah terkonfirmasi valid, sistem otomatis membentangkan jaring Fibonacci dan mengeksekusi layering cerdas untuk memaksimalkan pantulan harga.</p>
+        </div>
+
+        <!-- 📈 WIDGET MYFXBOOK MOMENTUM CANDLE -->
+        <div class="myfxbook-box">
+            <h3>
+                <svg viewBox="0 0 24 24"><path d="M3 20L9 12L14 16L21 6" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14L9 8L14 11L21 3" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                Live Track Record & Kinerja Aktual
+            </h3>
+            <div class="myfxbook-widget">
+                <a href="https://www.myfxbook.com/members/leetrader88/momentum-candle-bot/12144978" onclick="trackEvent('klik_myfxbook', {ea: 'MOMENTUM CANDLE'})">
+                    <img alt="widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=12144978&type=5"/>
+                </a>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 15px; font-style: italic;">Data diverifikasi pihak ketiga (Myfxbook). Klik gambar untuk melihat detail portofolio penuh.</p>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
+        <div class="pricing-list">
+            
+            <div class="price-card reguler">
+                <div class="badge-float badge-reguler">🔍 QUARTERLY STARTER</div>
+                <h4>Plan 3 Bulan</h4>
+                <div class="price">Rp 1.490.000 <span>/ 3 Bulan</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Tanpa batasan strategi.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Support Standar:</strong> Bantuan teknis WA.</li>
+                </ul>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Quarterly'}); openSmartForm(this, 'MOMENTUM CANDLE')">Pesan Plan 3 Bulan</button>
+            </div>
+
+            <div class="price-card annual">
+                <div class="badge-float badge-annual">🔥 BEST VALUE / PRO</div>
+                <h4>Annual Pro</h4>
+                <div class="price"><span class="price-coret">Rp 5.960.000</span> Rp 3.990.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>Double Lisensi:</strong> Aktif di 2 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Golden Preset:</strong> File setting Plug & Play.</li>
+                    <li><strong>Private Request:</strong> Gratis custom fitur.</li>
+                </ul>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Annual'}); openSmartForm(this, 'MOMENTUM CANDLE')">Pesan Annual Pro</button>
+            </div>
+
+            <div class="pricing-divider-wrap">
+                <hr class="pricing-divider">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
+                    ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
+                </button>
+            </div>
+
+            <div class="price-card subsidi">
+                <div class="badge-float badge-subsidi">🤝 JALUR SUBSIDI IB</div>
+                <h4>Paket Kemitraan Ekosistem</h4>
+                <div class="price">Rp 599.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Kualitas setara Annual Pro.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Syarat Mutlak:</strong> Wajib daftar Exness via link kami.</li>
+                    <li><strong>Biaya Aktivasi:</strong> Murni pemeliharaan server tahunan.</li>
+                </ul>
+                <div class="btn-group-wrap" style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6; flex: 1; min-width: 250px;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Exness IB</button>
+                    <button class="btn btn-primary" style="flex: 1; min-width: 250px;" onclick="trackEvent('klik_pesan', {ea: 'MOMENTUM CANDLE', paket: 'Subsidi IB'}); openSmartForm(this, 'MOMENTUM CANDLE')">Langkah 2: Isi Form Aktivasi</button>
+                </div>
+            </div>
+        </div>
+
+        <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 🟢 ROOM 4: LIGA PAIR -->
+    <!-- ======================================================= -->
+    <section id="room-liga" class="section ea-room">
+        <h2 class="section-room-title">Ruang Riset: <span>LIGA PAIR</span></h2>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/e_S9CFvS77A" title="Demo LIGA PAIR" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="ea-logic-box">
+            <h3>Logika Strategi Liga Pair</h3>
+            <p>Produk ini berfungsi sebagai Indikator Navigasi Kekuatan Mata Uang (Bukan EA Eksekusi Otomatis). Menyusun peringkat kekuatan mata uang layaknya klasemen liga secara <em>Real-Time</em>. Anda cukup men-transaksikan mata uang peringkat Teratas melawan peringkat Terbawah untuk probabilitas <em>Follow Trend</em> maksimal.</p>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
+        
+        <div class="pricing-list single-card">
+            <div class="price-card annual">
+                <div class="badge-float badge-annual">👑 BIAYA 1X SELAMANYA</div>
+                <h4>Lifetime Indicator</h4>
+                <div class="price">Rp 1.499.000 <span>/ Sekali Bayar</span></div>
+                <ul>
+                    <li><strong>Aset 100% Milik Anda:</strong> Tanpa biaya perpanjangan.</li>
+                    <li><strong>Slot Lisensi:</strong> Mengunci di 1 Akun Real MT5.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Support Standar:</strong> Bantuan teknis Chat WA.</li>
+                </ul>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'LIGA PAIR', paket: 'Lifetime'}); openSmartForm(this, 'LIGA PAIR (Indikator)')">Pesan Akses Lifetime</button>
+            </div>
+        </div>
+
+        <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 🟢 ROOM 5: iZONE ULTIMATE -->
+    <!-- ======================================================= -->
+    <section id="room-izone" class="section ea-room">
+        <h2 class="section-room-title">Ruang Riset: <span>iZONE ULTIMATE</span></h2>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/Hsl-fcqRneU" title="Demo iZONE ULTIMATE" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="ea-logic-box">
+            <h3>Logika Strategi iZone Ultimate</h3>
+            <p>Eksekutor teknikal murni berbasis <em>Smart Money Concepts (SMC) & Price Action</em>. Asisten ini mengeksekusi zona-zona penting Anda dengan akurasi mesin otomatis. Dirancang untuk menyingkirkan keraguan, ketakutan, atau emosi saat harga akhirnya menyentuh area <em>Order Block</em> Anda.</p>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
+        <div class="pricing-list">
+            
+            <div class="price-card reguler">
+                <div class="badge-float badge-reguler">🔍 QUARTERLY STARTER</div>
+                <h4>Plan 3 Bulan</h4>
+                <div class="price">Rp 1.490.000 <span>/ 3 Bulan</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Tanpa batasan strategi.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Support Standar:</strong> Bantuan teknis WA.</li>
+                </ul>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Quarterly'}); openSmartForm(this, 'iZONE ULTIMATE')">Pesan Plan 3 Bulan</button>
+            </div>
+
+            <div class="price-card annual">
+                <div class="badge-float badge-annual">🔥 BEST VALUE / PRO</div>
+                <h4>Annual Pro</h4>
+                <div class="price"><span class="price-coret">Rp 5.960.000</span> Rp 3.990.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>Double Lisensi:</strong> Aktif di 2 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Golden Preset:</strong> File setting Plug & Play.</li>
+                    <li><strong>Private Request:</strong> Gratis custom fitur.</li>
+                </ul>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Annual'}); openSmartForm(this, 'iZONE ULTIMATE')">Pesan Annual Pro</button>
+            </div>
+
+            <div class="pricing-divider-wrap">
+                <hr class="pricing-divider">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
+                    ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
+                </button>
+            </div>
+
+            <div class="price-card subsidi">
+                <div class="badge-float badge-subsidi">🤝 JALUR SUBSIDI IB</div>
+                <h4>Paket Kemitraan Ekosistem</h4>
+                <div class="price">Rp 599.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Kualitas setara Annual Pro.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Syarat Mutlak:</strong> Wajib daftar Exness via link kami.</li>
+                    <li><strong>Biaya Aktivasi:</strong> Murni pemeliharaan server tahunan.</li>
+                </ul>
+                <div class="btn-group-wrap" style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6; flex: 1; min-width: 250px;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Exness IB</button>
+                    <button class="btn btn-primary" style="flex: 1; min-width: 250px;" onclick="trackEvent('klik_pesan', {ea: 'iZONE ULTIMATE', paket: 'Subsidi IB'}); openSmartForm(this, 'iZONE ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
+                </div>
+            </div>
+        </div>
+
+        <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
+    </section>
+
+    <!-- ======================================================= -->
+    <!-- 🟢 ROOM 6: QUANTUM ULTIMATE (DENGAN MYFXBOOK) -->
+    <!-- ======================================================= -->
+    <section id="room-quantumult" class="section ea-room">
+        <h2 class="section-room-title">Ruang Riset: <span>QUANTUM ULTIMATE</span></h2>
+        
+        <div class="video-container">
+            <div class="video-wrapper">
+                <iframe src="https://www.youtube.com/embed/WKj0dAbfiO4" title="Demo QUANTUM ULTIMATE" loading="lazy" allowfullscreen></iframe>
+            </div>
+        </div>
+
+        <div class="ea-logic-box">
+            <h3>Logika Strategi Quantum Ultimate</h3>
+            <p>Master "Akun Tanaman" dengan gaya <em>Grid/Layering</em> berbatas. Mesin ini membuka jaring layering otomatis secara disiplin berdasarkan batas atas dan bawah yang Anda tetapkan. Dilengkapi dengan pengaturan Target Profit yang dipatok secara murni berdasarkan angka nominal Dolar ($).</p>
+        </div>
+
+        <!-- 📈 WIDGET MYFXBOOK QUANTUM ULTIMATE -->
+        <div class="myfxbook-box">
+            <h3>
+                <svg viewBox="0 0 24 24"><path d="M3 20L9 12L14 16L21 6" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14L9 8L14 11L21 3" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                Live Track Record & Kinerja Aktual
+            </h3>
+            <div class="myfxbook-widget">
+                <a href="https://www.myfxbook.com/members/leetrader88/quantum-ultimate/12168918" onclick="trackEvent('klik_myfxbook', {ea: 'QUANTUM ULTIMATE'})">
+                    <img alt="widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=12168918&type=5"/>
+                </a>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 15px; font-style: italic;">Data diverifikasi pihak ketiga (Myfxbook). Klik gambar untuk melihat detail portofolio penuh.</p>
+        </div>
+
+        <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
+        <div class="pricing-list">
+            
+            <div class="price-card reguler">
+                <div class="badge-float badge-reguler">🔍 QUARTERLY STARTER</div>
+                <h4>Plan 3 Bulan</h4>
+                <div class="price">Rp 1.490.000 <span>/ 3 Bulan</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Tanpa batasan strategi.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Support Standar:</strong> Bantuan teknis WA.</li>
+                </ul>
+                <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Quarterly'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Pesan Plan 3 Bulan</button>
+            </div>
+
+            <div class="price-card annual">
+                <div class="badge-float badge-annual">🔥 BEST VALUE / PRO</div>
+                <h4>Annual Pro</h4>
+                <div class="price"><span class="price-coret">Rp 5.960.000</span> Rp 3.990.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>Double Lisensi:</strong> Aktif di 2 Akun Real.</li>
+                    <li><strong>Bebas Broker:</strong> Tanpa ikatan kemitraan.</li>
+                    <li><strong>Golden Preset:</strong> File setting Plug & Play.</li>
+                    <li><strong>Private Request:</strong> Gratis custom fitur.</li>
+                </ul>
+                <button class="btn btn-primary btn-block btn-pulse" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Annual'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Pesan Annual Pro</button>
+            </div>
+
+            <div class="pricing-divider-wrap">
+                <hr class="pricing-divider">
+                <button class="btn-warning-glow" onclick="trackEvent('klik_info_ib'); openWajibBacaModal()">
+                    ⚠️ PENTING: Wajib Baca Sebelum Memilih Jalur Subsidi (IB)
+                </button>
+            </div>
+
+            <div class="price-card subsidi">
+                <div class="badge-float badge-subsidi">🤝 JALUR SUBSIDI IB</div>
+                <h4>Paket Kemitraan Ekosistem</h4>
+                <div class="price">Rp 599.000 <span>/ 1 Tahun</span></div>
+                <ul>
+                    <li><strong>100% Fitur Terbuka:</strong> Kualitas setara Annual Pro.</li>
+                    <li><strong>1 Lisensi MT5:</strong> Mengunci di 1 Akun Real.</li>
+                    <li><strong>Syarat Mutlak:</strong> Wajib daftar Exness via link kami.</li>
+                    <li><strong>Biaya Aktivasi:</strong> Murni pemeliharaan server tahunan.</li>
+                </ul>
+                <div class="btn-group-wrap" style="display: flex; gap: 15px; margin-top: 25px; flex-wrap: wrap;">
+                    <button class="btn btn-outline" style="border-color: #3b82f6; color: #3b82f6; flex: 1; min-width: 250px;" onclick="trackEvent('klik_daftar_ib'); openReferralModal()">Langkah 1: Buka Akun Exness IB</button>
+                    <button class="btn btn-primary" style="flex: 1; min-width: 250px;" onclick="trackEvent('klik_pesan', {ea: 'QUANTUM ULTIMATE', paket: 'Subsidi IB'}); openSmartForm(this, 'QUANTUM ULTIMATE')">Langkah 2: Isi Form Aktivasi</button>
+                </div>
+            </div>
+        </div>
+
+        <a onclick="goBackToLobby()" class="btn-back-bottom">← Kembali ke Etalase Utama</a>
+    </section>
 
     <!-- ======================================================= -->
     <!-- 🔗 LOGO POWERED, SOSMED & FOOTER -->
@@ -262,7 +689,7 @@
         <div class="mp-box">
             <h2 class="section-title" style="margin-bottom: 20px;">Official <span>Channel</span></h2>
             <div class="marketplace-links">
-                <!-- Hapus target="_blank" jika Anda ingin membuka Shopee dan YouTube di tab yang sama -->
+                <!-- Target blank DIHAPUS sesuai permintaan agar membuka di tab yang sama -->
                 <a href="http://shopee.co.id/jaringcuan77?entryPoint=ShopBySearch&searchKeyword=jaringcuan77" class="mp-btn" onclick="trackEvent('klik_sosmed_shopee')">
                     <svg viewBox="0 0 24 24" fill="#ee4d2d"><path d="M16.2 6.8c-.2-1.8-1.7-3.2-3.6-3.2s-3.4 1.4-3.6 3.2H4.8v1.7h1.6v10.6c0 1.2.9 2.1 2.1 2.1h7c1.2 0 2.1-.9 2.1-2.1V8.5h1.6V6.8h-4.2zm-7.3 0c.2-1 1.1-1.7 2.1-1.7s1.9.7 2.1 1.7H8.9zm6.9 12.3c0 .3-.2.6-.6.6h-7c-.3 0-.6-.2-.6-.6V8.5h8.2v10.6z"/><path d="M9.8 11.8h4.4v1.5H9.8zM9.8 15.3h4.4v1.5H9.8z"/></svg>
                     Shopee
@@ -283,8 +710,135 @@
     </footer>
 
     <!-- ======================================================= -->
-    <!-- 📑 MODAL POP-UP (Paste modal Anda di sini) -->
+    <!-- 📑 MODAL POP-UP WAJIB BACA -->
     <!-- ======================================================= -->
+    <div class="modal-overlay" id="wajibBacaModal">
+        <div class="modal-content wajib-baca-content">
+            <button class="modal-close" onclick="closeWajibBacaModal()">×</button>
+            <h3>Jalur Subsidi & Keamanan Ekosistem</h3>
+            <p>Kami merancang struktur harga IB agar teknologi kami bisa diakses oleh semua kalangan yang serius, sesuai kemampuannya.</p>
+            <p>Pendaftaran via tautan IB kami <strong>bukan</strong> bertujuan untuk mencari untung semata (faktanya kami tidak mematok minimal deposit sepeser pun).</p>
+            <p>Tautan IB ini semata-mata kami gunakan sebagai <strong>Radar Anti-Bajak</strong>. Sistem kami membutuhkan Nomor Akun yang terekam di jaringan ekosistem resmi untuk memvalidasi dan mengunci <em>License Key</em> Anda.</p>
+            <p style="margin-bottom: 25px;">Ini adalah sistem keamanan lisensi yang rasional, transparan, tanpa jebakan bersyarat.</p>
+            
+            <button class="btn btn-primary btn-block" onclick="closeWajibBacaModal()">✓ Saya Mengerti & Tutup Pesan Ini</button>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 📑 MODAL POP-UP KODE REFERAL -->
+    <!-- ======================================================= -->
+    <div class="modal-overlay" id="referralModal">
+        <div class="modal-content" style="text-align: center; max-width: 480px;">
+            <button class="modal-close" onclick="closeReferralModal()">×</button>
+            <h3 style="color: #3b82f6; margin-bottom: 10px; border-bottom: none;">⚠️ SYARAT WAJIB SUBSIDI</h3>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 15px;">Agar sistem server kami dapat memverifikasi akun Anda, Anda <strong>wajib</strong> memasukkan Kode Mitra Ekosistem kami saat mendaftar di Exness.</p>
+            
+            <img src="https://i.postimg.cc/H8TmFPM8/image.jpg" alt="Panduan Partner Code Exness" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); margin-bottom: 15px;">
+            
+            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; border: 1px dashed #3b82f6; margin-bottom: 20px; font-size: 1.6rem; font-weight: bold; color: var(--text-main); letter-spacing: 2px;">
+                1l69bo5xiw
+            </div>
+            <button id="btn-copy-redirect" onclick="copyAndRedirect(this)" class="btn btn-primary btn-block btn-pulse" style="font-size: 1.05rem; padding: 15px;">📋 Salin Kode & Lanjut Daftar</button>
+        </div>
+    </div>
+
+    <!-- ======================================================= -->
+    <!-- 📑 MODAL POP-UP FORMULIR AKTIVASI -->
+    <!-- ======================================================= -->
+    <div class="modal-overlay" id="formModal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeFormModal()">×</button>
+            <h3 style="color: var(--primary); border-bottom: 1px solid rgba(245, 158, 11, 0.3); padding-bottom: 10px; margin-bottom: 15px;">Formulir Aktivasi Mesin</h3>
+            
+            <!-- KOTAK BCA COMEBACK -->
+            <div class="payment-box" id="payment-info">
+                <span style="font-size: 0.9rem; color: #60a5fa; display: block; margin-bottom: 5px;">Silakan transfer biaya lisensi/server ke:</span>
+                <div class="bank-details">
+                    <span>🏦 BANK BCA a.n <strong>SUNARDI</strong></span>
+                    <span style="display: flex; align-items: center; font-size: 1.3rem;">
+                        🔢 <strong>7130298634</strong>
+                        <button type="button" class="btn-copy" onclick="trackEvent('klik_salin_rekening'); copyText('7130298634', this)">📋 Salin</button>
+                    </span>
+                </div>
+            </div>
+            
+            <form id="form-klaim">
+                <!-- Kolom Gaib Anti Spam -->
+                <input type="text" name="hp_trap" id="hp_trap" style="display:none" tabindex="-1" autocomplete="off">
+
+                <!-- 🟢 Sumber Order -->
+                <div class="form-group" id="sumber-order-group" style="display: none;">
+                    <label style="color: #60a5fa;">Anda Order Melalui Aplikasi Apa?</label>
+                    <select name="sumber_order" id="sumber_order">
+                        <option value="" disabled selected>-- Pilih Aplikasi Pembelian --</option>
+                        <option value="Shopee">Shopee</option>
+                        <option value="TikTok">TikTok / Lainnya</option>
+                    </select>
+                </div>
+
+                <!-- 🟢 Input EA -->
+                <div class="form-group" id="group-ea-normal">
+                    <label>Produk Terpilih</label>
+                    <input type="text" name="pilihan_ea" id="val_ea" readonly>
+                </div>
+                <div class="form-group" id="group-ea-market" style="display: none;">
+                    <label style="color: #60a5fa;">Pilih Produk EA</label>
+                    <select id="market_val_ea">
+                        <option value="" disabled selected>-- Pilih Produk EA --</option>
+                        <option value="iSCALP PRO">iSCALP PRO</option>
+                        <option value="QUANTUM APEX">QUANTUM APEX</option>
+                        <option value="MOMENTUM CANDLE">MOMENTUM CANDLE</option>
+                        <option value="LIGA PAIR (Indikator)">LIGA PAIR (Indikator)</option>
+                        <option value="iZONE ULTIMATE">iZONE ULTIMATE</option>
+                        <option value="QUANTUM ULTIMATE">QUANTUM ULTIMATE</option>
+                    </select>
+                </div>
+
+                <!-- 🟢 Input Paket -->
+                <div class="form-group" id="group-paket-normal">
+                    <label>Paket Lisensi</label>
+                    <input type="text" name="pilihan_paket" id="val_paket" readonly>
+                </div>
+                <div class="form-group" id="group-paket-market" style="display: none;">
+                    <label style="color: #60a5fa;">Pilih Paket yang Dibeli</label>
+                    <select id="market_val_paket">
+                        <option value="" disabled selected>-- Pilih Paket --</option>
+                        <option value="Quarterly (3 Bulan)">Quarterly (3 Bulan)</option>
+                        <option value="Annual Pro (1 Tahun)">Annual Pro (1 Tahun)</option>
+                        <option value="Lifetime (Khusus Liga Pair)">Lifetime (Khusus Liga Pair)</option>
+                        <option value="Jalur Subsidi IB">Jalur Subsidi IB</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Nama Lengkap</label>
+                    <input type="text" name="nama" required placeholder="Sesuai nama pemesan/akun Anda">
+                </div>
+                <div class="form-group">
+                    <label>Nomor WhatsApp</label>
+                    <input type="tel" name="no_wa" required placeholder="Contoh: 081234567890" pattern="[0-9]{10,14}" oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.setCustomValidity('');" oninvalid="this.setCustomValidity('Nomor WA wajib diisi angka (Min 10 digit, Maks 14 digit).')">
+                </div>
+                <div class="form-group">
+                    <label>Email Pengiriman File</label>
+                    <input type="email" name="email" required placeholder="pastikan email aktif (contoh@gmail.com)" pattern="[a-z0-9._%+\-]+@[a-z0-9.\-]+\.[a-z]{2,}$" oninput="this.setCustomValidity('')" oninvalid="this.setCustomValidity('Masukkan format email yang valid dengan tanda @ dan nama domain (misal: .com)')">
+                </div>
+                <div class="form-group">
+                    <label>ID Login MT5 Anda</label>
+                    <input type="text" inputmode="numeric" name="no_mt5" id="val_mt5" required placeholder="Min. 6 Digit Angka" pattern="[0-9]{6,}" oninput="this.value = this.value.replace(/[^0-9]/g, ''); this.setCustomValidity('');" oninvalid="this.setCustomValidity('ID MT5 wajib diisi angka minimal 6 digit.')">
+                    <small style="color: var(--primary); display: block; margin-top: 5px;">*Wajib untuk penguncian License Key.</small>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-block" style="font-size: 1.1rem; padding: 15px; margin-top: 25px;">Simpan Data & Lanjut Chat Admin</button>
+
+                <div id="promo-marketplace" style="display: none; text-align: center; margin-top: 25px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.05);">
+                    <a href="https://www.jaringcuan.net" style="color: #94a3b8; text-decoration: none; font-size: 0.95rem; font-weight: bold; transition: 0.3s;" onmouseover="this.style.color='#f8fafc'" onmouseout="this.style.color='#94a3b8'">
+                        🌎 www.jaringcuan.net
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- 🟢 MEMANGGIL FILE JS DARI FOLDER -->
     <script src="js/main.js"></script>
