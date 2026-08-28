@@ -155,18 +155,27 @@
         .video-container { max-width: 750px; margin: 0 auto 30px auto; border-radius: 16px; overflow: hidden; border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 20px 50px rgba(0,0,0,0.8); }
         .video-wrapper { position: relative; padding-bottom: 56.25%; height: 0; background: #000; }
         .video-wrapper iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-        .video-placeholder { padding: 40px 20px; text-align: center; color: #475569; font-style: italic; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; }
-
+        
         .ea-logic-box { background: linear-gradient(135deg, rgba(30, 41, 59, 0.8) 0%, rgba(15, 23, 42, 0.9) 100%); backdrop-filter: blur(10px); padding: 35px 30px; border-radius: 16px; border: 1px solid var(--border); margin-bottom: 50px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
         .ea-logic-box h3 { color: var(--primary); margin-bottom: 15px; font-size: 1.5rem; }
         .ea-logic-box p { color: #cbd5e1; line-height: 1.8; font-size: 1.1rem; max-width: 800px; margin: 0 auto; letter-spacing: 0.3px; }
         .ea-logic-box em { color: #fff; font-weight: 600; }
 
         /* ======================================================= */
+        /* 📈 KOTAK MYFXBOOK WIDGET (TAMBAHAN BARU) */
+        /* ======================================================= */
+        .myfxbook-box { background: linear-gradient(135deg, rgba(30, 41, 59, 0.5) 0%, rgba(15, 23, 42, 0.8) 100%); backdrop-filter: blur(10px); padding: 30px 20px; border-radius: 16px; border: 1px solid var(--border); margin: -20px auto 50px auto; max-width: 750px; text-align: center; box-shadow: 0 10px 25px rgba(0,0,0,0.5); }
+        .myfxbook-box h3 { color: #f8fafc; margin-bottom: 20px; font-size: 1.25rem; letter-spacing: 0.5px; display: flex; align-items: center; justify-content: center; gap: 8px; font-weight: bold; }
+        .myfxbook-box h3 svg { width: 22px; height: 22px; fill: none; }
+        .myfxbook-widget { transition: transform 0.3s ease; display: inline-block; border-radius: 6px; overflow: hidden; background: #fff; padding: 2px; } /* Myfxbook punya background putih native */
+        .myfxbook-widget:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(245, 158, 11, 0.25); }
+        .myfxbook-widget img { max-width: 100%; height: auto; display: block; border-radius: 4px; }
+
+        /* ======================================================= */
         /* 💰 TABEL HARGA PROFESIONAL (GRID SYSTEM & SEJAJAR) */
         /* ======================================================= */
         .pricing-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin: 0 auto; align-items: stretch; }
-        .pricing-list.single-card { max-width: 450px; margin: 0 auto; display: flex; justify-content: center; } /* Khusus Liga Pair */
+        .pricing-list.single-card { max-width: 450px; margin: 0 auto; display: flex; justify-content: center; } 
         
         .price-card { padding: 40px 30px; text-align: left; position: relative; background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px); border-radius: 16px; border: 1px solid var(--border); box-shadow: 0 10px 30px rgba(0,0,0,0.5); display: flex; flex-direction: column; transition: 0.3s; width: 100%; }
         
@@ -181,7 +190,6 @@
         .price span { font-size: 1rem; color: var(--text-muted); font-weight: normal; display: block; margin-top: 5px; text-shadow: none; }
         .price-coret { font-size: 1rem; color: #ef4444; text-decoration: line-through; display: block; margin-bottom: -5px; }
         
-        /* Flex Grow agar kotak sejajar dan tombol selalu ke bawah */
         .price-card ul { list-style: none; margin-bottom: 30px; color: #cbd5e1; font-size: 1.05rem; flex-grow: 1; }
         .price-card ul li { margin-bottom: 15px; line-height: 1.5; display: flex; align-items: flex-start; gap: 10px; }
         .price-card ul li::before { content: '✓'; color: var(--primary); font-weight: bold; font-size: 1.2rem; }
@@ -189,11 +197,9 @@
         
         .price-card .btn-block, .price-card .btn-group-wrap { margin-top: auto; }
         
-        /* Modifikasi Annual Pro (Center Stage/Menyala) */
         .price-card.annual { border: 2px solid var(--primary); transform: scale(1.03); z-index: 2; background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); box-shadow: 0 15px 40px rgba(245, 158, 11, 0.15); }
-        .pricing-list.single-card .price-card.annual { transform: scale(1); z-index: 1; } /* Reset scale untuk Liga Pair */
+        .pricing-list.single-card .price-card.annual { transform: scale(1); z-index: 1; } 
         
-        /* Modifikasi Subsidi IB (Full Width Bawah) */
         .price-card.subsidi { grid-column: 1 / -1; max-width: 750px; margin: 20px auto 0 auto; border-color: rgba(59, 130, 246, 0.4); }
 
         .pricing-divider-wrap { text-align: center; margin: 30px 0 15px 0; position: relative; grid-column: 1 / -1; }
@@ -256,7 +262,6 @@
         .form-group input:focus, .form-group select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 10px rgba(245, 158, 11, 0.2); background: rgba(0,0,0,0.5); }
         .form-group input[readonly] { background: rgba(245, 158, 11, 0.05); color: var(--primary); font-weight: bold; border-color: rgba(245, 158, 11, 0.3); cursor: not-allowed; }
 
-        /* KOTAK BCA COMEBACK */
         .payment-box { background: rgba(59, 130, 246, 0.05); border: 1px solid rgba(59, 130, 246, 0.3); border-left: 5px solid #3b82f6; padding: 15px; border-radius: 8px; margin-bottom: 25px; }
         .bank-details { background: rgba(0,0,0,0.4); padding: 12px; border-radius: 6px; font-family: monospace; font-size: 1.15rem; color: var(--text-main); border: 1px dashed #3b82f6; margin-top: 10px; display: flex; flex-direction: column; gap: 5px; }
         
@@ -308,7 +313,7 @@
     </header>
 
     <!-- ======================================================= -->
-    <!-- 🏠 LOBI UTAMA (HERO, PILLAR, COMPARE, CATALOG, FAQ) -->
+    <!-- 🏠 LOBI UTAMA -->
     <!-- ======================================================= -->
     <section id="lobby" style="display: block;">
         
@@ -335,7 +340,7 @@
                 </div>
             </div>
 
-            <!-- 🟢 PERBANDINGAN EA ABAL-ABAL VS JARING CUAN -->
+            <!-- 🟢 PERBANDINGAN EA -->
             <div class="compare-box">
                 <div class="compare-card compare-bad">
                     <h4>EA Abal-Abal / Luaran Sana</h4>
@@ -412,7 +417,7 @@
             </div>
         </div>
 
-        <!-- ❓ FAQ SECTION (ACCORDION) -->
+        <!-- ❓ FAQ SECTION -->
         <div class="faq-section">
             <h2 class="faq-title">Pertanyaan <span>Populer</span></h2>
             
@@ -519,7 +524,6 @@
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
         <div class="pricing-list">
             
-            <!-- KARTU QUARTERLY -->
             <div class="price-card reguler">
                 <div class="badge-float badge-reguler">🔍 QUARTERLY STARTER</div>
                 <h4>Plan 3 Bulan</h4>
@@ -533,7 +537,6 @@
                 <button class="btn btn-outline btn-block" onclick="trackEvent('klik_pesan', {ea: 'iSCALP PRO', paket: 'Quarterly'}); openSmartForm(this, 'iSCALP PRO')">Pesan Plan 3 Bulan</button>
             </div>
 
-            <!-- KARTU ANNUAL PRO -->
             <div class="price-card annual">
                 <div class="badge-float badge-annual">🔥 BEST VALUE / PRO</div>
                 <h4>Annual Pro</h4>
@@ -554,7 +557,6 @@
                 </button>
             </div>
 
-            <!-- KARTU IB SUBSIDI -->
             <div class="price-card subsidi">
                 <div class="badge-float badge-subsidi">🤝 JALUR SUBSIDI IB</div>
                 <h4>Paket Kemitraan Ekosistem</h4>
@@ -649,7 +651,7 @@
     </section>
 
     <!-- ======================================================= -->
-    <!-- 🟢 ROOM 3: MOMENTUM CANDLE -->
+    <!-- 🟢 ROOM 3: MOMENTUM CANDLE (DENGAN MYFXBOOK) -->
     <!-- ======================================================= -->
     <section id="room-momentum" class="section ea-room">
         <h2 class="section-room-title">Ruang Riset: <span>MOMENTUM CANDLE</span></h2>
@@ -663,6 +665,20 @@
         <div class="ea-logic-box">
             <h3>Logika Strategi Momentum Candle</h3>
             <p>Sistem untuk menangkap tren besar. Memantau pasar dengan filter volatilitas <em>ATR</em> yang ketat mencari "Candle Besar". Setelah terkonfirmasi valid, sistem otomatis membentangkan jaring Fibonacci dan mengeksekusi layering cerdas untuk memaksimalkan pantulan harga.</p>
+        </div>
+
+        <!-- 📈 WIDGET MYFXBOOK MOMENTUM CANDLE -->
+        <div class="myfxbook-box">
+            <h3>
+                <svg viewBox="0 0 24 24"><path d="M3 20L9 12L14 16L21 6" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14L9 8L14 11L21 3" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                Live Track Record & Kinerja Aktual
+            </h3>
+            <div class="myfxbook-widget">
+                <a href="https://www.myfxbook.com/members/leetrader88/momentum-candle-bot/12144978" target="_blank" onclick="trackEvent('klik_myfxbook', {ea: 'MOMENTUM CANDLE'})">
+                    <img alt="widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=12144978&type=5"/>
+                </a>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 15px; font-style: italic;">Data diverifikasi pihak ketiga (Myfxbook). Klik gambar untuk melihat detail portofolio penuh.</p>
         </div>
 
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
@@ -722,7 +738,7 @@
     </section>
 
     <!-- ======================================================= -->
-    <!-- 🟢 ROOM 4: LIGA PAIR (KHUSUS 1 PAKET) -->
+    <!-- 🟢 ROOM 4: LIGA PAIR -->
     <!-- ======================================================= -->
     <section id="room-liga" class="section ea-room">
         <h2 class="section-room-title">Ruang Riset: <span>LIGA PAIR</span></h2>
@@ -740,7 +756,6 @@
 
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
         
-        <!-- HANYA 1 KARTU KHUSUS INDIKATOR -->
         <div class="pricing-list single-card">
             <div class="price-card annual">
                 <div class="badge-float badge-annual">👑 BIAYA 1X SELAMANYA</div>
@@ -833,7 +848,7 @@
     </section>
 
     <!-- ======================================================= -->
-    <!-- 🟢 ROOM 6: QUANTUM ULTIMATE -->
+    <!-- 🟢 ROOM 6: QUANTUM ULTIMATE (DENGAN MYFXBOOK) -->
     <!-- ======================================================= -->
     <section id="room-quantumult" class="section ea-room">
         <h2 class="section-room-title">Ruang Riset: <span>QUANTUM ULTIMATE</span></h2>
@@ -847,6 +862,20 @@
         <div class="ea-logic-box">
             <h3>Logika Strategi Quantum Ultimate</h3>
             <p>Master "Akun Tanaman" dengan gaya <em>Grid/Layering</em> berbatas. Mesin ini membuka jaring layering otomatis secara disiplin berdasarkan batas atas dan bawah yang Anda tetapkan. Dilengkapi dengan pengaturan Target Profit yang dipatok secara murni berdasarkan angka nominal Dolar ($).</p>
+        </div>
+
+        <!-- 📈 WIDGET MYFXBOOK QUANTUM ULTIMATE -->
+        <div class="myfxbook-box">
+            <h3>
+                <svg viewBox="0 0 24 24"><path d="M3 20L9 12L14 16L21 6" stroke="#f59e0b" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><path d="M3 14L9 8L14 11L21 3" stroke="#3b82f6" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                Live Track Record & Kinerja Aktual
+            </h3>
+            <div class="myfxbook-widget">
+                <a href="https://www.myfxbook.com/members/leetrader88/quantum-ultimate/12168918" target="_blank" onclick="trackEvent('klik_myfxbook', {ea: 'QUANTUM ULTIMATE'})">
+                    <img alt="widget" src="https://widget.myfxbook.com/widget/widget.png?accountOid=12168918&type=5"/>
+                </a>
+            </div>
+            <p style="color: #94a3b8; font-size: 0.85rem; margin-top: 15px; font-style: italic;">Data diverifikasi pihak ketiga (Myfxbook). Klik gambar untuk melihat detail portofolio penuh.</p>
         </div>
 
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem; color: var(--text-main);">Pilih Paket Akses</h3>
