@@ -77,7 +77,7 @@
         .trust-card h4 { color: var(--text-main); font-size: 1.15rem; margin: 15px 0 10px 0; }
         .trust-icon { font-size: 2.8rem; filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.4)); }
 
-        /* 🟢 BANNER PROMO KECIL */
+        /* BANNER PROMO KECIL */
         .promo-banner { background: linear-gradient(90deg, rgba(34, 197, 94, 0.1), rgba(15, 23, 42, 0.8)); border: 1px solid #22c55e; border-radius: 16px; padding: 35px; max-width: 850px; margin: 0 auto 4rem auto; text-align: center; box-shadow: 0 10px 30px rgba(34, 197, 94, 0.15); position: relative; }
         .promo-badge { position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: #22c55e; color: #000; font-weight: 800; padding: 5px 25px; border-radius: 20px; letter-spacing: 1px; font-size: 0.85rem; }
         .promo-banner h3 { color: #fff; font-size: 1.8rem; margin-bottom: 15px; font-weight: bold; }
@@ -137,9 +137,10 @@
         .form-group input, .form-group select { width: 100%; padding: 12px; background: rgba(0,0,0,0.3); border: 1px solid rgba(255,255,255,0.2); border-radius: 8px; color: #fff; font-size: 1rem; }
         
         .bank-details { background: rgba(0,0,0,0.4); padding: 12px; border-radius: 6px; font-family: monospace; border: 1px dashed var(--primary); display: flex; flex-direction: column; gap: 5px; margin-top: 10px; }
-        .btn-copy { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 4px 10px; border-radius: 4px; cursor: pointer; }
+        .btn-copy { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; padding: 6px 12px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: 0.3s;}
+        .btn-copy:hover { background: rgba(255, 255, 255, 0.2); }
 
-        /* 🟢 KOTAK GAMBAR QRIS */
+        /* KOTAK GAMBAR QRIS */
         .qris-box { text-align: center; margin-bottom: 20px; background: #fff; padding: 15px; border-radius: 12px; }
         .qris-box img { max-width: 100%; height: auto; border-radius: 8px; }
 
@@ -164,9 +165,7 @@
 
 <body id="top">
 
-    <!-- ======================================================= -->
-    <!-- 🟢 3. HEADER & MENU ATAS -->
-    <!-- ======================================================= -->
+    <!-- HEADER & LOBI UTAMA (TIDAK ADA YANG DIUBAH) -->
     <div class="promo-ticker-wrap">
         <div class="promo-ticker">🟢 SYSTEM STATUS: OPTIMAL | ⚡ JARING CUAN ALGORITHMS ACTIVE | Hentikan tebak-tebakan market. Eksekusi probabilitas matematika tinggi...</div>
     </div>
@@ -180,34 +179,18 @@
         </div>
     </header>
 
-    <!-- ======================================================= -->
-    <!-- 🟢 4. HALAMAN DEPAN (LOBI UTAMA) -->
-    <!-- ======================================================= -->
     <section id="lobby" style="display: block;">
         <div class="section">
-            
             <h1 class="hero-title">Teknologi Algoritma Institusi.<br>Kini di Tangan <span>Anda</span>.</h1>
             <p class="hero-subtitle">Ekosistem Asisten Trading & Full-Autotrade berbasis probabilitas matematika tinggi. 100% rasional.</p>
             
             <div class="trust-pillars">
-                <div class="trust-card">
-                    <span class="trust-icon">🔒</span>
-                    <h4>Kendali Dana di Anda</h4>
-                    <p>Uang tetap aman di akun broker Anda.</p>
-                </div>
-                <div class="trust-card">
-                    <span class="trust-icon">🤖</span>
-                    <h4>Eksekusi Tanpa Emosi</h4>
-                    <p>Mengeksekusi zona harga super disiplin.</p>
-                </div>
-                <div class="trust-card">
-                    <span class="trust-icon">📊</span>
-                    <h4>Transparan & Logis</h4>
-                    <p>Berbasis Price Action, ATR, dan Tren Makro.</p>
-                </div>
+                <div class="trust-card"><span class="trust-icon">🔒</span><h4>Kendali Dana di Anda</h4><p>Uang tetap aman di akun broker Anda.</p></div>
+                <div class="trust-card"><span class="trust-icon">🤖</span><h4>Eksekusi Tanpa Emosi</h4><p>Mengeksekusi zona harga super disiplin.</p></div>
+                <div class="trust-card"><span class="trust-icon">📊</span><h4>Transparan & Logis</h4><p>Berbasis Price Action, ATR, dan Tren Makro.</p></div>
             </div>
 
-            <!-- 🟢 BANNER PROMO -->
+            <!-- BANNER PROMO -->
             <div class="promo-banner">
                 <div class="promo-badge">🚀 SPECIAL TRIAL PROMO</div>
                 <h3>Jalur Khusus: <span>Buktikan Sendiri Ketajamannya</span></h3>
@@ -220,400 +203,124 @@
             <div class="catalog-grid">
                 <div class="ea-card" style="border-top: 3px solid #22d3ee;" onclick="openRoom('room-iscalp')">
                     <div class="cat-badge" style="color: #22d3ee; border-color: #22d3ee;">⚡ SEMI AUTO</div>
-                    <h3 style="margin-top: 15px;">iSCALP PRO</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Eksekusi sniper super cepat di zona Supply & Demand.</p>
+                    <h3 style="margin-top: 15px;">iSCALP PRO</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Eksekusi sniper super cepat di zona Supply & Demand.</p>
                 </div>
                 <div class="ea-card" style="border-top: 3px solid #fbbf24;" onclick="openRoom('room-quantum')">
                     <div class="cat-badge" style="color: #fbbf24; border-color: #fbbf24;">🤖 FULL AUTO</div>
-                    <h3 style="margin-top: 15px;">QUANTUM APEX</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Manager Momentum & Trend Follower dengan Auto Trailing.</p>
+                    <h3 style="margin-top: 15px;">QUANTUM APEX</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Manager Momentum & Trend Follower dengan Auto Trailing.</p>
                 </div>
                 <div class="ea-card" style="border-top: 3px solid #fbbf24;" onclick="openRoom('room-momentum')">
                     <div class="cat-badge" style="color: #fbbf24; border-color: #fbbf24;">🤖 FULL AUTO</div>
-                    <h3 style="margin-top: 15px;">MOMENTUM CANDLE</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Penangkap tren besar menggunakan bentangan Fibonacci otomatis.</p>
+                    <h3 style="margin-top: 15px;">MOMENTUM CANDLE</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Penangkap tren besar menggunakan bentangan Fibonacci otomatis.</p>
                 </div>
                 <div class="ea-card" style="border-top: 3px solid #c084fc;" onclick="openRoom('room-liga')">
                     <div class="cat-badge" style="color: #c084fc; border-color: #c084fc;">📡 INDIKATOR</div>
-                    <h3 style="margin-top: 15px;">LIGA PAIR</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Klasemen kekuatan mata uang Real-Time (Tanpa Trial).</p>
+                    <h3 style="margin-top: 15px;">LIGA PAIR</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Klasemen kekuatan mata uang Real-Time (Tanpa Trial).</p>
                 </div>
                 <div class="ea-card" style="border-top: 3px solid #22d3ee;" onclick="openRoom('room-izone')">
                     <div class="cat-badge" style="color: #22d3ee; border-color: #22d3ee;">⚡ SEMI AUTO</div>
-                    <h3 style="margin-top: 15px;">iZONE PRO</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Eksekutor murni Smart Money Concepts (SMC).</p>
+                    <h3 style="margin-top: 15px;">iZONE PRO</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Eksekutor murni Smart Money Concepts (SMC).</p>
                 </div>
                 <div class="ea-card" style="border-top: 3px solid #fbbf24;" onclick="openRoom('room-quantumult')">
                     <div class="cat-badge" style="color: #fbbf24; border-color: #fbbf24;">🤖 FULL AUTO</div>
-                    <h3 style="margin-top: 15px;">QUANTUM ULTIMATE</h3>
-                    <p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Master Grid Layering berbatas dengan Target Dolar.</p>
+                    <h3 style="margin-top: 15px;">QUANTUM ULTIMATE</h3><p style="color: #cbd5e1; font-size: 0.95rem; margin-top: 15px;">Master Grid Layering berbatas dengan Target Dolar.</p>
                 </div>
             </div>
             
             <!-- ASLI: FAQ ACCORDION LENGKAP -->
             <div class="faq-section">
                 <h2 class="faq-title">Pertanyaan <span>Populer</span></h2>
-                
-                <div class="faq-item">
-                    <button class="faq-question">Apakah modal saya akan dikelola oleh tim Jaring Cuan?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        <strong>TIDAK.</strong> Kami murni perusahaan pengembang teknologi (Developer). 100% dana berada di dalam akun MT5 dan Broker Anda sendiri. Anda memegang kendali penuh untuk <em>Deposit</em> maupun <em>Withdraw</em> kapan pun tanpa campur tangan kami.
-                    </div></div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Dari mana sumber logika dan aturan strategi (rules) EA ini berasal?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        Kami <strong>membedah (reverse-engineering)</strong> cara kerja para mentor <em>trading</em> profesional yang terbukti realistis dan konsisten mencetak profit. Kami mengekstrak SOP dan gaya <em>trading</em> mereka, membuang faktor emosinya, lalu mengotomatisasinya menjadi algoritma pintar. Hasilnya: eksekusi level master yang berjalan otomatis tanpa kelelahan.
-                    </div></div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Apakah saya bisa mengatur risiko sendiri atau semua dikontrol robot?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        Jaring Cuan menggunakan <strong>Teknologi Hybrid</strong>. Anda memegang kendali penuh. Filosofi kami adalah <em>'Amankan Risiko Dahulu, Profit Kemudian'</em>. Fitur pembatasan Risiko (Risk %) dan Take Profit dapat Anda atur secara dinamis dan <em>real-time</em> langsung dari panel layar Anda.
-                    </div></div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Apakah EA ini aman untuk ujian akun Prop-Firm?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        <strong>Sangat Direkomendasikan.</strong> Kami tahu musuh terbesar <em>Prop-Firm</em> adalah pelanggaran Drawdown harian dan rilis News. Mesin kami dilengkapi <strong>News Protector</strong> (Otomatis memblokir open posisi saat berita High Impact) serta <strong>Hard Drawdown Limiter</strong> untuk mencegah pelanggaran batas kerugian Prop-Firm Anda.
-                    </div></div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Apakah laptop/PC saya harus menyala 24 jam nonstop?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        Tidak perlu. Kami sangat menyarankan Anda menyewa VPS (Virtual Private Server) agar EA tetap bekerja mengeksekusi pasar 24 jam penuh di server cloud, meskipun laptop atau HP Anda dimatikan.
-                    </div></div>
-                </div>
-
-                <div class="faq-item">
-                    <button class="faq-question">Saya masih pemula, apakah setting-nya ribet?</button>
-                    <div class="faq-answer"><div class="faq-answer-inner">
-                        Sama sekali tidak. Khusus untuk pembeli paket <strong>Annual Pro</strong>, kami menyertakan <em>Golden Preset</em> (File setelan matang). Anda cukup me-<em>load</em> file tersebut ke MT5, dan mesin akan langsung berjalan dengan konfigurasi paling optimal (Plug & Play).
-                    </div></div>
-                </div>
+                <div class="faq-item"><button class="faq-question">Apakah modal saya akan dikelola oleh tim Jaring Cuan?</button><div class="faq-answer"><div class="faq-answer-inner"><strong>TIDAK.</strong> Kami murni perusahaan pengembang teknologi (Developer). 100% dana berada di dalam akun MT5 dan Broker Anda sendiri. Anda memegang kendali penuh untuk <em>Deposit</em> maupun <em>Withdraw</em> kapan pun tanpa campur tangan kami.</div></div></div>
+                <div class="faq-item"><button class="faq-question">Dari mana sumber logika dan aturan strategi (rules) EA ini berasal?</button><div class="faq-answer"><div class="faq-answer-inner">Kami <strong>membedah (reverse-engineering)</strong> cara kerja para mentor <em>trading</em> profesional yang terbukti realistis dan konsisten mencetak profit. Kami mengekstrak SOP dan gaya <em>trading</em> mereka, membuang faktor emosinya, lalu mengotomatisasinya menjadi algoritma pintar. Hasilnya: eksekusi level master yang berjalan otomatis tanpa kelelahan.</div></div></div>
+                <div class="faq-item"><button class="faq-question">Apakah saya bisa mengatur risiko sendiri atau semua dikontrol robot?</button><div class="faq-answer"><div class="faq-answer-inner">Jaring Cuan menggunakan <strong>Teknologi Hybrid</strong>. Anda memegang kendali penuh. Filosofi kami adalah <em>'Amankan Risiko Dahulu, Profit Kemudian'</em>. Fitur pembatasan Risiko (Risk %) dan Take Profit dapat Anda atur secara dinamis dan <em>real-time</em> langsung dari panel layar Anda.</div></div></div>
+                <div class="faq-item"><button class="faq-question">Apakah EA ini aman untuk ujian akun Prop-Firm?</button><div class="faq-answer"><div class="faq-answer-inner"><strong>Sangat Direkomendasikan.</strong> Kami tahu musuh terbesar <em>Prop-Firm</em> adalah pelanggaran Drawdown harian dan rilis News. Mesin kami dilengkapi <strong>News Protector</strong> (Otomatis memblokir open posisi saat berita High Impact) serta <strong>Hard Drawdown Limiter</strong> untuk mencegah pelanggaran batas kerugian Prop-Firm Anda.</div></div></div>
+                <div class="faq-item"><button class="faq-question">Apakah laptop/PC saya harus menyala 24 jam nonstop?</button><div class="faq-answer"><div class="faq-answer-inner">Tidak perlu. Kami sangat menyarankan Anda menyewa VPS (Virtual Private Server) agar EA tetap bekerja mengeksekusi pasar 24 jam penuh di server cloud, meskipun laptop atau HP Anda dimatikan.</div></div></div>
+                <div class="faq-item"><button class="faq-question">Saya masih pemula, apakah setting-nya ribet?</button><div class="faq-answer"><div class="faq-answer-inner">Sama sekali tidak. Khusus untuk pembeli paket <strong>Annual Pro</strong>, kami menyertakan <em>Golden Preset</em> (File setelan matang). Anda cukup me-<em>load</em> file tersebut ke MT5, dan mesin akan langsung berjalan dengan konfigurasi paling optimal (Plug & Play).</div></div></div>
             </div>
-            
         </div>
     </section>
 
     <!-- ======================================================= -->
-    <!-- 🟢 5. HALAMAN RUANGAN (ROOM) MASING-MASING EA -->
+    <!-- KAMAR MASING-MASING EA (RUANG RISET) -->
     <!-- ======================================================= -->
-    
-    <!-- ROOM 1: iSCALP PRO -->
     <section id="room-iscalp" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">iSCALP PRO</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/aVyBXbIzm98" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class="ea-logic-box">
-            <h3>Logika Strategi iScalp Pro</h3>
-            <p>Sistem ini dirancang khusus untuk eksekusi cepat di area sideways (Timeframe Kecil). Anda cukup menggambar garis batas <em>Supply & Demand</em>, dan biarkan asisten ini mengeksekusi titik entry paling aman. Dilengkapi perlindungan ketat <em>(Strict Stop Loss)</em> dan murni logika Non-Martingale.</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/aVyBXbIzm98" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi iScalp Pro</h3><p>Sistem ini dirancang khusus untuk eksekusi cepat di area sideways (Timeframe Kecil). Anda cukup menggambar garis batas <em>Supply & Demand</em>, dan biarkan asisten ini mengeksekusi titik entry paling aman. Dilengkapi perlindungan ketat <em>(Strict Stop Loss)</em> dan murni logika Non-Martingale.</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list">
-            <div class="price-card">
-                <div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div>
-                <h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div>
-                <ul>
-                    <li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Bantuan Teknis WA</strong> (Support Standar)</li>
-                </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm('iSCALP_PRO', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button>
-            </div>
-            
-            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);">
-                <div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div>
-                <h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div>
-                <ul>
-                    <li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li>
-                    <li><strong>Private Request</strong> (Gratis custom fitur khusus)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('iSCALP_PRO', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button>
-            </div>
+            <div class="price-card"><div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div><h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div><ul><li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li><li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li><li><strong>Bantuan Teknis WA</strong> (Support Standar)</li></ul><button class="btn btn-outline btn-block" onclick="openSmartForm('iSCALP_PRO', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button></div>
+            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);"><div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div><h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div><ul><li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li><li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li><li><strong>Private Request</strong> (Gratis custom fitur khusus)</li></ul><button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('iSCALP_PRO', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button></div>
         </div>
-
-        <div class="dev-note-box">
-            <h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4>
-            <p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p>
-            <p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p>
-            <p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>
-            Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p>
-            <p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p>
-        </div>
-
+        <div class="dev-note-box"><h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4><p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p><p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p><p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p><p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p></div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
-    <!-- ROOM 2: QUANTUM APEX -->
     <section id="room-quantum" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">QUANTUM APEX</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/j9-kseDRkzo" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-        
-        <div class="ea-logic-box">
-            <h3>Logika Strategi Quantum Apex</h3>
-            <p>Sistem ini dirancang untuk Follow Trend & Pullback. Anda cukup menentukan arah BUY atau SELL, dan biarkan sistem cerdas kami otomatis mencari momen pantulan entry terbaik secara presisi. Dilengkapi fitur <em>Dynamic Take Profit</em> dan <em>Auto Trailing Stop</em> untuk mengamankan profit Anda.</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/j9-kseDRkzo" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi Quantum Apex</h3><p>Sistem ini dirancang untuk Follow Trend & Pullback. Anda cukup menentukan arah BUY atau SELL, dan biarkan sistem cerdas kami otomatis mencari momen pantulan entry terbaik secara presisi. Dilengkapi fitur <em>Dynamic Take Profit</em> dan <em>Auto Trailing Stop</em> untuk mengamankan profit Anda.</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list">
-            <div class="price-card">
-                <div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div>
-                <h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div>
-                <ul>
-                    <li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Bantuan Teknis WA</strong> (Support Standar)</li>
-                </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm('QUANTUM_APEX', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button>
-            </div>
-            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);">
-                <div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div>
-                <h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div>
-                <ul>
-                    <li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li>
-                    <li><strong>Private Request</strong> (Gratis custom fitur khusus)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('QUANTUM_APEX', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button>
-            </div>
+            <div class="price-card"><div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div><h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div><ul><li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li><li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li><li><strong>Bantuan Teknis WA</strong> (Support Standar)</li></ul><button class="btn btn-outline btn-block" onclick="openSmartForm('QUANTUM_APEX', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button></div>
+            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);"><div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div><h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div><ul><li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li><li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li><li><strong>Private Request</strong> (Gratis custom fitur khusus)</li></ul><button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('QUANTUM_APEX', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button></div>
         </div>
-
-        <div class="dev-note-box">
-            <h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4>
-            <p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p>
-            <p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p>
-            <p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>
-            Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p>
-            <p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p>
-        </div>
-
+        <div class="dev-note-box"><h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4><p>Sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu. Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel. <strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong></p></div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
-    <!-- ROOM 3: MOMENTUM CANDLE -->
     <section id="room-momentum" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">MOMENTUM CANDLE</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/_CVq8U3unYw" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="ea-logic-box">
-            <h3>Logika Strategi Momentum Candle</h3>
-            <p>Sistem untuk menangkap tren besar. Memantau pasar dengan filter volatilitas <em>ATR</em> yang ketat mencari "Candle Besar". Setelah terkonfirmasi valid, sistem otomatis membentangkan jaring Fibonacci dan mengeksekusi layering cerdas untuk memaksimalkan pantulan harga.</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/_CVq8U3unYw" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi Momentum Candle</h3><p>Sistem untuk menangkap tren besar. Memantau pasar dengan filter volatilitas <em>ATR</em> yang ketat mencari "Candle Besar". Setelah terkonfirmasi valid, sistem otomatis membentangkan jaring Fibonacci dan mengeksekusi layering cerdas untuk memaksimalkan pantulan harga.</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list">
-            <div class="price-card">
-                <div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div>
-                <h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div>
-                <ul>
-                    <li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Bantuan Teknis WA</strong> (Support Standar)</li>
-                </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm('MOMENTUM CANDLE', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button>
-            </div>
-            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);">
-                <div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div>
-                <h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div>
-                <ul>
-                    <li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li>
-                    <li><strong>Private Request</strong> (Gratis custom fitur khusus)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('MOMENTUM CANDLE', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button>
-            </div>
+            <div class="price-card"><div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div><h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div><ul><li><strong>Fitur 100% Terbuka</strong></li><li><strong>1 Lisensi MT5</strong></li><li><strong>Bebas Semua Broker</strong></li><li><strong>Bebas Jenis Akun</strong></li><li><strong>Bantuan Teknis WA</strong></li></ul><button class="btn btn-outline btn-block" onclick="openSmartForm('MOMENTUM CANDLE', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button></div>
+            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);"><div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div><h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div><ul><li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li><li><strong>Bebas Semua Broker</strong></li><li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li><li><strong>Private Request</strong> (Gratis custom fitur khusus)</li></ul><button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('MOMENTUM CANDLE', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button></div>
         </div>
-
-        <div class="dev-note-box">
-            <h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4>
-            <p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p>
-            <p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p>
-            <p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>
-            Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p>
-            <p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p>
-        </div>
-
+        <div class="dev-note-box"><h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4><p>Sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu. Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel. <strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong></p></div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
-    <!-- ROOM 4: LIGA PAIR -->
     <section id="room-liga" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">LIGA PAIR</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/e_S9CFvS77A" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="ea-logic-box">
-            <h3>Logika Strategi Liga Pair</h3>
-            <p>Produk ini berfungsi sebagai Indikator Navigasi Kekuatan Mata Uang (Bukan EA Eksekusi Otomatis). Menyusun peringkat kekuatan mata uang layaknya klasemen liga secara <em>Real-Time</em>. Anda cukup men-transaksikan mata uang peringkat Teratas melawan peringkat Terbawah untuk probabilitas <em>Follow Trend</em> maksimal.</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/e_S9CFvS77A" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi Liga Pair</h3><p>Produk ini berfungsi sebagai Indikator Navigasi Kekuatan Mata Uang (Bukan EA Eksekusi Otomatis). Menyusun peringkat kekuatan mata uang layaknya klasemen liga secara <em>Real-Time</em>. Anda cukup men-transaksikan mata uang peringkat Teratas melawan peringkat Terbawah untuk probabilitas <em>Follow Trend</em> maksimal.</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list single-card">
-            <div class="price-card" style="border: 2px solid #c084fc; background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);">
-                <div class="badge-float" style="background:#c084fc;">👑 SEKALI BAYAR (KHUSUS INDIKATOR)</div>
-                <h4>Lifetime Akses</h4><div class="price" style="color:#c084fc;">Rp 1.499.000</div>
-                <ul>
-                    <li><strong>Aset 100% Milik Anda</strong> (Tanpa biaya perpanjangan)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="background: linear-gradient(180deg, #c084fc 0%, #9333ea 100%);" onclick="openSmartForm('LIGA PAIR', 'Lifetime Indicator (Rp 1.499.000)')">Pesan Akses Lifetime</button>
-            </div>
+            <div class="price-card" style="border: 2px solid #c084fc; background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%);"><div class="badge-float" style="background:#c084fc;">👑 SEKALI BAYAR (KHUSUS INDIKATOR)</div><h4>Lifetime Akses</h4><div class="price" style="color:#c084fc;">Rp 1.499.000</div><ul><li><strong>Aset 100% Milik Anda</strong> (Tanpa biaya perpanjangan)</li><li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li></ul><button class="btn btn-primary btn-block" style="background: linear-gradient(180deg, #c084fc 0%, #9333ea 100%);" onclick="openSmartForm('LIGA PAIR', 'Lifetime Indicator (Rp 1.499.000)')">Pesan Akses Lifetime</button></div>
         </div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
-    <!-- ROOM 5: iZONE PRO -->
     <section id="room-izone" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">iZONE PRO</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/Hsl-fcqRneU" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="ea-logic-box">
-            <h3>Logika Strategi iZone Pro</h3>
-            <p>Eksekutor teknikal murni berbasis <em>Smart Money Concepts (SMC) & Price Action</em>. Asisten ini mengeksekusi zona-zona penting Anda dengan akurasi mesin otomatis. Dirancang untuk menyingkirkan keraguan, ketakutan, atau emosi saat harga akhirnya menyentuh area <em>Order Block</em> Anda.</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/Hsl-fcqRneU" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi iZone Pro</h3><p>Eksekutor teknikal murni berbasis <em>Smart Money Concepts (SMC) & Price Action</em>. Asisten ini mengeksekusi zona-zona penting Anda dengan akurasi mesin otomatis. Dirancang untuk menyingkirkan keraguan, ketakutan, atau emosi saat harga akhirnya menyentuh area <em>Order Block</em> Anda.</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list">
-            <div class="price-card">
-                <div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div>
-                <h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div>
-                <ul>
-                    <li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Bantuan Teknis WA</strong> (Support Standar)</li>
-                </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm('iZONE_PRO', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button>
-            </div>
-            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);">
-                <div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div>
-                <h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div>
-                <ul>
-                    <li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li>
-                    <li><strong>Private Request</strong> (Gratis custom fitur khusus)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('iZONE_PRO', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button>
-            </div>
+            <div class="price-card"><div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div><h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div><ul><li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li><li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bantuan Teknis WA</strong> (Support Standar)</li></ul><button class="btn btn-outline btn-block" onclick="openSmartForm('iZONE_PRO', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button></div>
+            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);"><div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div><h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div><ul><li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li><li><strong>Private Request</strong> (Gratis custom fitur khusus)</li></ul><button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('iZONE_PRO', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button></div>
         </div>
-
-        <div class="dev-note-box">
-            <h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4>
-            <p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p>
-            <p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p>
-            <p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>
-            Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p>
-            <p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p>
-        </div>
-
+        <div class="dev-note-box"><h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4><p>Sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu. Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel. <strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong></p></div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
-    <!-- ROOM 6: QUANTUM ULTIMATE -->
     <section id="room-quantumult" class="section ea-room">
         <h2 style="text-align:center; font-size:2.2rem; margin-bottom:2rem;">Ruang Riset: <span style="color:var(--primary);">QUANTUM ULTIMATE</span></h2>
-        
-        <div class="video-container">
-            <div class="video-wrapper">
-                <iframe width="100%" height="400" src="https://www.youtube.com/embed/WKj0dAbfiO4" frameborder="0" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div class="ea-logic-box">
-            <h3>Logika Strategi Quantum Ultimate</h3>
-            <p>Master "Akun Tanaman" dengan gaya <em>Grid/Layering</em> berbatas. Mesin ini membuka jaring layering otomatis secara disiplin berdasarkan batas atas dan bawah yang Anda tetapkan. Dilengkapi dengan pengaturan Target Profit yang dipatok secara murni berdasarkan angka nominal Dolar ($).</p>
-        </div>
-
+        <div class="video-container"><div class="video-wrapper"><iframe width="100%" height="400" src="https://www.youtube.com/embed/WKj0dAbfiO4" frameborder="0" allowfullscreen></iframe></div></div>
+        <div class="ea-logic-box"><h3>Logika Strategi Quantum Ultimate</h3><p>Master "Akun Tanaman" dengan gaya <em>Grid/Layering</em> berbatas. Mesin ini membuka jaring layering otomatis secara disiplin berdasarkan batas atas dan bawah yang Anda tetapkan. Dilengkapi dengan pengaturan Target Profit yang dipatok secara murni berdasarkan angka nominal Dolar ($).</p></div>
         <h3 style="text-align: center; margin-bottom: 30px; font-size: 1.8rem;">Pilih Paket Lisensi</h3>
         <div class="pricing-list">
-            <div class="price-card">
-                <div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div>
-                <h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div>
-                <ul>
-                    <li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li>
-                    <li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Bantuan Teknis WA</strong> (Support Standar)</li>
-                </ul>
-                <button class="btn btn-outline btn-block" onclick="openSmartForm('QUANTUM_ULTIMATE', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button>
-            </div>
-            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);">
-                <div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div>
-                <h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div>
-                <ul>
-                    <li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li>
-                    <li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li>
-                    <li><strong>Bebas Jenis Akun</strong> (Cent / Micro / Standard)</li>
-                    <li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li>
-                    <li><strong>Private Request</strong> (Gratis custom fitur khusus)</li>
-                </ul>
-                <button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('QUANTUM_ULTIMATE', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button>
-            </div>
+            <div class="price-card"><div class="badge-float" style="background:#475569;">🔍 QUARTERLY STARTER</div><h4>Plan 3 Bulan</h4><div class="price">Rp 1.490.000</div><ul><li><strong>Fitur 100% Terbuka</strong> (Kualitas Setara Pro)</li><li><strong>1 Lisensi MT5</strong> (Bebas Ganti Akun kapan saja)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Bantuan Teknis WA</strong> (Support Standar)</li></ul><button class="btn btn-outline btn-block" onclick="openSmartForm('QUANTUM_ULTIMATE', 'Plan 3 Bulan (Rp 1.490.000)')">Pesan Plan 3 Bulan</button></div>
+            <div class="price-card" style="border: 2px solid var(--primary); background: linear-gradient(180deg, rgba(30, 41, 59, 0.9) 0%, rgba(15, 23, 42, 0.95) 100%); transform: scale(1.02);"><div class="badge-float" style="background:var(--primary);">🔥 ANNUAL PRO (BEST VALUE)</div><h4>Plan 1 Tahun</h4><div class="price"><span style="text-decoration:line-through; font-size:1rem; color:#ef4444; display:block; margin-bottom:-5px;">Rp 5.960.000</span> Rp 3.990.000</div><ul><li><strong>Double Lisensi</strong> (Bisa jalan di 2 Akun sekaligus)</li><li><strong>Bebas Semua Broker</strong> (Real / Demo / Prop-Firm)</li><li><strong>Golden Preset</strong> (File setting matang Plug & Play)</li><li><strong>Private Request</strong> (Gratis custom fitur khusus)</li></ul><button class="btn btn-primary btn-block" style="animation: pulse-anim 2s infinite;" onclick="openSmartForm('QUANTUM_ULTIMATE', 'Annual Pro (Rp 3.990.000)')">Pesan Annual Pro</button></div>
         </div>
-
-        <div class="dev-note-box">
-            <h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4>
-            <p>Mari bicara realita teknis. Di luaran sana, banyak vendor menjual robot trading <em>Lifetime</em> (Seumur Hidup) lalu lepas tangan. Padahal, sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu.</p>
-            <p>Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel; ketika struktur market berubah atau MT5 <em>update</em>, robot Anda akan hancur dan penciptanya sudah tidak mau tahu.</p>
-            <p><strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong><br>
-            Dengan sistem ini, kami secara moral dan profesional mengikat diri untuk <strong>terus merawat karya kami</strong>. Tim Quant kami memantau perubahan market dan akan menyuntikkan <em>Update Algoritma</em> rutin setiap 3 bulan sekali secara otomatis dari jarak jauh.</p>
-            <p style="font-style:italic; color:#fbbf24; margin-top:15px; font-weight:bold;">"Anda tidak sekadar menyewa robot, Anda sedang mempekerjakan tim riset algoritma yang terus memastikan senjata Anda tetap tajam."</p>
-        </div>
-
+        <div class="dev-note-box"><h4>💡 CATATAN DEVELOPER: Mengapa Kami Tidak Menjual Lisensi "Lifetime"?</h4><p>Sistem <strong>MetaTrader 5</strong> dan struktur <strong>Algoritma Pasar Finansial</strong> itu sangat dinamis dan terus berubah setiap waktu. Membeli EA <em>Lifetime</em> ibarat membeli mesin tanpa garansi bengkel. <strong style="color:#fff;">Sistem Sewa (Berlangganan) adalah Bukti Tanggung Jawab Kami.</strong></p></div>
         <a onclick="goHome()" class="btn-back-bottom">← Kembali ke Lobi Utama</a>
     </section>
 
     <!-- ======================================================= -->
-    <!-- 🟢 6. OPERASI BEDAH: MODAL (POP-UP) TERBARU -->
+    <!-- 🟢 MODAL (POP-UP) -->
     <!-- ======================================================= -->
 
     <!-- MODAL A: FORMULIR TEST DRIVE (TRIAL 3 HARI) DENGAN QRIS -->
@@ -627,7 +334,6 @@
                 <p style="font-size: 0.85rem; color: #94a3b8; margin-bottom: 12px; line-height: 1.5; text-align:center;">Silakan scan QRIS di bawah ini untuk pembayaran Commitment Fee <strong>Rp 25.000</strong> ditambah <strong style="color:white;">3 DIGIT TERAKHIR</strong> nomor WhatsApp Anda.</p>
                 
                 <div class="qris-box">
-                    <!-- 🟢 GAMBAR QRIS JASON GALLERY (JALUR SUDAH DIPERBAIKI KE qrish.jpg) -->
                     <img src="images/qrish.jpg" alt="Barcode QRIS Pembayaran">
                 </div>
 
@@ -642,12 +348,18 @@
                     <label>Pilih Algoritma yang ingin di Test Drive:</label>
                     <select id="trial_ea_name" required style="border-color:#22c55e; color:#22c55e; font-weight:bold; font-size: 1.05rem;">
                         <option value="" disabled selected>-- Pilih Robot EA --</option>
-                        <!-- GEMBOK ENUM SUPABASE -->
+                        
+                        <!-- EA YANG SUDAH SIAP -->
                         <option value="iSCALP_PRO">iSCALP PRO</option>
+                        <option value="iZONE_PRO">iZONE PRO</option>
+                        
+                        <!-- 🟢 SELIMUT GAIB: EA YANG BELUM SIAP -->
+                        <!-- 
                         <option value="QUANTUM_APEX">QUANTUM APEX</option>
                         <option value="MOMENTUM CANDLE">MOMENTUM CANDLE</option>
-                        <option value="iZONE_PRO">iZONE PRO</option>
                         <option value="QUANTUM_ULTIMATE">QUANTUM ULTIMATE</option>
+                        -->
+
                     </select>
                 </div>
                 <div class="form-group">
@@ -672,7 +384,7 @@
         </div>
     </div>
 
-    <!-- MODAL B: SUKSES DAFTAR & DOWNLOAD (TANPA OTOMATIS WA) -->
+    <!-- MODAL B: SUKSES DAFTAR & DOWNLOAD (DENGAN KOTAK COPY WEBREQUEST) -->
     <div class="modal-overlay" id="successTrialModal">
         <div class="modal-content" style="max-width: 600px; text-align: center;">
             <h2 style="color:#22c55e; margin-bottom:10px;">🎉 Pendaftaran Diterima!</h2>
@@ -685,11 +397,21 @@
             <h4 style="color:#ef4444; margin-bottom:8px; font-size: 1.15rem; font-weight: 800;">⚠️ LANGKAH WAJIB SEBELUM DOWNLOAD</h4>
             <p style="color:#94a3b8; font-size:0.9rem; margin-bottom:15px;">Tonton video 2 menit di bawah ini tentang cara pasang WebRequest agar EA tidak mati/error saat ditarik ke chart.</p>
             
-            <div style="background:#000; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); margin-bottom:25px;">
+            <div style="background:#000; border-radius:8px; overflow:hidden; border:1px solid rgba(255,255,255,0.1); margin-bottom:15px;">
+                <!-- Ganti YOUR_VIDEO_ID dengan ID Video WebRequest aslimu -->
                 <iframe width="100%" height="280" src="https://www.youtube.com/embed/YOUR_VIDEO_ID" frameborder="0" allowfullscreen></iframe>
             </div>
 
-            <!-- TOMBOL DOWNLOAD MENGGUNAKAN SISTEM LACI/FOLDER -->
+            <!-- 🟢 KOTAK SALIN URL WEBREQUEST -->
+            <div style="background: rgba(0,0,0,0.4); padding: 15px; border-radius: 8px; border: 1px dashed #3b82f6; text-align: left; margin-bottom: 25px;">
+                <span style="font-size: 0.95rem; color: #93c5fd; font-weight: bold;">Salin (Copy) dan Daftarkan URL ini ke WebRequest MT5 Anda:</span>
+                <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 10px; background: rgba(0,0,0,0.6); padding: 10px 15px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.1);">
+                    <code style="color: #fff; font-size: 1.1rem; letter-spacing: 0.5px;">https://api.jaringcuan.net</code>
+                    <button type="button" class="btn-copy" onclick="copyText('https://api.jaringcuan.net', this)">📋 Salin</button>
+                </div>
+            </div>
+
+            <!-- TOMBOL DOWNLOAD -->
             <a id="btn-download-ea" href="#" download class="btn btn-primary btn-block" style="font-size:1.1rem; padding:15px; margin-bottom:15px; background: linear-gradient(180deg, #22c55e 0%, #16a34a 100%); animation: pulse-anim 2s infinite;">📥 SAYA SUDAH PAHAM, DOWNLOAD EA SEKARANG</a>
             
             <button class="btn btn-outline btn-block" onclick="closeSuccessTrialModal()">Tutup Jendela Ini</button>
@@ -713,30 +435,12 @@
             
             <form id="form-klaim">
                 <input type="text" name="hp_trap" id="hp_trap" style="display:none" tabindex="-1">
-                <div class="form-group">
-                    <label>Produk Terpilih</label>
-                    <input type="text" name="pilihan_ea" id="val_ea" readonly style="color: var(--primary); font-weight: bold;">
-                </div>
-                <div class="form-group">
-                    <label>Paket Lisensi</label>
-                    <input type="text" name="pilihan_paket" id="val_paket" readonly style="color: var(--primary); font-weight: bold;">
-                </div>
-                <div class="form-group">
-                    <label>Nama Lengkap</label>
-                    <input type="text" name="nama" required>
-                </div>
-                <div class="form-group">
-                    <label>Nomor WhatsApp</label>
-                    <input type="tel" name="no_wa" required>
-                </div>
-                <div class="form-group">
-                    <label>Email Anda</label>
-                    <input type="email" name="email" required>
-                </div>
-                <div class="form-group">
-                    <label>ID MT5 Anda</label>
-                    <input type="text" name="no_mt5" required>
-                </div>
+                <div class="form-group"><label>Produk Terpilih</label><input type="text" name="pilihan_ea" id="val_ea" readonly style="color: var(--primary); font-weight: bold;"></div>
+                <div class="form-group"><label>Paket Lisensi</label><input type="text" name="pilihan_paket" id="val_paket" readonly style="color: var(--primary); font-weight: bold;"></div>
+                <div class="form-group"><label>Nama Lengkap</label><input type="text" name="nama" required></div>
+                <div class="form-group"><label>Nomor WhatsApp</label><input type="tel" name="no_wa" required></div>
+                <div class="form-group"><label>Email Anda</label><input type="email" name="email" required></div>
+                <div class="form-group"><label>ID MT5 Anda</label><input type="text" name="no_mt5" required></div>
                 <button type="submit" class="btn btn-primary btn-block" style="padding: 15px; font-size: 1.1rem;">Simpan Data & Chat Admin (WA)</button>
             </form>
         </div>
@@ -759,7 +463,7 @@
     <!-- 🟢 8. SCRIPT LOGIKA JAVASCRIPT (OTAK WEBSITE) -->
     <!-- ======================================================= -->
     <script>
-        // --- A. LOKASI FOLDER FILE LOKAL (Pastikan nama file di GitHub sama persis dengan yang di bawah ini) ---
+        // LOKASI FOLDER FILE LOKAL
         const lokasiFolderFiles = {
             "iSCALP_PRO": "files/iSCALP_PRO.ex5",
             "QUANTUM_APEX": "files/QUANTUM_APEX.ex5",
@@ -768,7 +472,7 @@
             "QUANTUM_ULTIMATE": "files/QUANTUM_ULTIMATE.ex5"
         };
 
-        // --- B. LOGIKA PERUBAHAN HARGA 3 DIGIT WA ---
+        // FUNGSI NOMINAL UNIK WA 3 DIGIT
         function updateNominalUnik() {
             const wa = document.getElementById('trial_wa').value;
             const totalElement = document.getElementById('total-transfer');
@@ -784,7 +488,16 @@
             }
         }
 
-        // --- C. FUNGSI BUKA TUTUP MODAL ---
+        // FUNGSI COPY TEXT (BERFUNGSI DI HP DAN PC)
+        function copyText(text, btn) {
+            const ori = btn.innerHTML;
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = '✅ Tersalin'; btn.style.color='#22c55e';
+                setTimeout(()=> { btn.innerHTML = ori; btn.style.color=''; }, 2000);
+            }).catch(()=> { alert("Browser Anda memblokir fitur salin otomatis."); });
+        }
+
+        // FUNGSI BUKA TUTUP MODAL
         const trialModal = document.getElementById('trialModal');
         function openTrialModal() {
             document.getElementById('form-trial').reset();
@@ -796,14 +509,13 @@
 
         const successTrialModal = document.getElementById('successTrialModal');
         function openSuccessTrialModal(eaName) {
-            // Arahkan tombol download ke laci folder lokal
             const linkDownload = lokasiFolderFiles[eaName] || "#";
             document.getElementById('btn-download-ea').href = linkDownload;
             successTrialModal.classList.add('active');
         }
         function closeSuccessTrialModal() { successTrialModal.classList.remove('active'); }
 
-        // --- D. FUNGSI KIRIM DATA TRIAL KE VERCEL (TANPA BUKA WA OTOMATIS) ---
+        // FUNGSI KIRIM DATA TRIAL KE VERCEL (TANPA BUKA WA)
         async function kirimDataTrial(event) {
             event.preventDefault(); 
             
@@ -822,7 +534,6 @@
             const email = document.getElementById('trial_email').value;
             const mt5 = document.getElementById('trial_mt5').value;
 
-            // MENGIRIM 5 DATA YANG DIBUTUHKAN KE SUPABASE
             const dataPendaftaran = {
                 nama: nama,
                 no_wa: waValidasi,
@@ -842,9 +553,7 @@
 
                 if (respons.ok) {
                     closeTrialModal();
-                    // Langsung buka modal Sukses dan beri link download EA
                     openSuccessTrialModal(eaTerpilih);
-
                 } else {
                     alert("❌ PENDAFTARAN GAGAL: " + (hasil.error || "Sistem menolak pendaftaran."));
                 }
@@ -856,7 +565,7 @@
             }
         }
 
-        // --- E. FUNGSI FAQ (AKORDION) ---
+        // FUNGSI FAQ (AKORDION)
         const accordions = document.querySelectorAll('.faq-question');
         accordions.forEach(acc => {
             acc.addEventListener('click', function() {
@@ -873,7 +582,7 @@
             });
         });
 
-        // --- F. SISTEM NAVIGASI LOBI DAN ROOM EA ---
+        // SISTEM NAVIGASI LOBI DAN ROOM EA
         function showRoomElement(roomId) {
             document.getElementById('lobby').style.display = 'none';
             document.querySelectorAll('.ea-room').forEach(r => r.style.display = 'none');
@@ -897,16 +606,7 @@
             else showLobbyElement();
         });
 
-        // --- G. FUNGSI COPY TEXT OTOMATIS ---
-        function copyText(text, btn) {
-            const ori = btn.innerHTML;
-            navigator.clipboard.writeText(text).then(() => {
-                btn.innerHTML = '✅ Tersalin'; btn.style.color='#22c55e';
-                setTimeout(()=> { btn.innerHTML = ori; btn.style.color=''; }, 2000);
-            }).catch(()=> { alert("Browser Anda memblokir fitur salin otomatis."); });
-        }
-
-        // --- H. LOGIKA PEMBELIAN BERBAYAR (NORMAL) ---
+        // LOGIKA PEMBELIAN BERBAYAR (NORMAL)
         const formModal = document.getElementById('formModal');
         function openSmartForm(eaName, packageName) {
             document.getElementById('val_ea').value = eaName;
@@ -934,7 +634,7 @@
             });
         });
 
-        // --- I. EFEK PSIKOLOGIS (TICKER NOTIFIKASI PALSU) ---
+        // EFEK PSIKOLOGIS (TICKER NOTIFIKASI PALSU)
         const ticker = document.getElementById('live-ticker');
         const tickerMsg = document.getElementById('ticker-msg');
         const listNama = ["0812****", "0857****", "0813****", "0878****", "0896****", "0821****"];
@@ -951,6 +651,7 @@
         // TUTUP MODAL JIKA KLIK AREA LUAR KOTAK
         window.addEventListener('click', e => {
             if(e.target === trialModal) closeTrialModal();
+            if(e.target === successTrialModal) closeSuccessTrialModal();
             if(e.target === formModal) closeFormModal();
         });
     </script>
